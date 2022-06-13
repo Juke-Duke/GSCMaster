@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GSCMasterGuide.Infrastructure.Migrations
 {
     [DbContext(typeof(GSCDbContext))]
-    [Migration("20220613055749_Initial")]
+    [Migration("20220613065307_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
