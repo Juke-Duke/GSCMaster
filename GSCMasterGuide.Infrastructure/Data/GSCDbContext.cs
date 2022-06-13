@@ -5,6 +5,8 @@ namespace GSCMasterGuide.Infrastructure.Data
 {
     public class GSCDbContext : DbContext
     {
+        public GSCDbContext(DbContextOptions<GSCDbContext> options) : base(options) {}
+
         public DbSet<Pokemon> Pokemon => Set<Pokemon>();
 
         public DbSet<Move> Moves => Set<Move>();
