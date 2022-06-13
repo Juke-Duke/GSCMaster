@@ -8,7 +8,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSCMasterGuide.Blazor", "GS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSCMasterGuide.Infrastructure", "GSCMasterGuide.Infrastructure\GSCMasterGuide.Infrastructure.csproj", "{AC84EFC4-A6D3-44C3-ADD6-7EC6A582FD3E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSCMasterGuide.Shared", "GSCMasterGuide.Shared\GSCMasterGuide.Shared.csproj", "{2BDE020B-1445-4AA7-8DF2-FAA4366067DD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSCMasterGuide.Domain", "GSCMasterGuide.Domain\GSCMasterGuide.Domain.csproj", "{44DB2126-64C2-4A1F-992E-779FCA480A8F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,5 +35,9 @@ Global
 		{2BDE020B-1445-4AA7-8DF2-FAA4366067DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2BDE020B-1445-4AA7-8DF2-FAA4366067DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2BDE020B-1445-4AA7-8DF2-FAA4366067DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44DB2126-64C2-4A1F-992E-779FCA480A8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44DB2126-64C2-4A1F-992E-779FCA480A8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44DB2126-64C2-4A1F-992E-779FCA480A8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44DB2126-64C2-4A1F-992E-779FCA480A8F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
