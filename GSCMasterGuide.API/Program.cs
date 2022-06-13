@@ -19,7 +19,7 @@ app.MapControllers();
 using (var scope = app.Services.CreateScope())
 {
     var dbContext = scope.ServiceProvider.GetRequiredService<GSCDbContext>();
-    PokemonSeed.Seed(dbContext);
+    PokemonSeed.SeedTest(dbContext);
 }
 
 app.Run();
