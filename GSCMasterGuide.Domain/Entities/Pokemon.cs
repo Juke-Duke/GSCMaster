@@ -1,3 +1,4 @@
+using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
 namespace GSCMasterGuide.Domain.Entities
@@ -26,9 +27,10 @@ namespace GSCMasterGuide.Domain.Entities
 
         public int Speed { get; set; } = 0;
 
-        public int? PreEvolution { get; set; }
-
-        public ICollection<Pokemon>? Evolutions { get; set; }
+        public Pokemon? PreEvolution { get; set; }
+    
+        [InverseProperty("PreEvolution")]
+        public ICollection<Pokemon> Evolutions { get; set; } = new List<Pokemon>();
 
         public ICollection<Move> Moves { get; set; } = new List<Move>();
     }

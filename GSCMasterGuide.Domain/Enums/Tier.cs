@@ -8,6 +8,7 @@ namespace GSCMasterGuide.Domain.Enums
         UU,
         NUBL,
         NU,
+        NFE,
         LC
     }
 }
