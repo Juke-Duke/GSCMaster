@@ -28,7 +28,7 @@ namespace GSCMasterGuide.Domain.Entities
 
         public int? PreEvolution { get; set; }
 
-        public ICollection<Pokemon> Evolutions { get; set; } = new List<Pokemon>();
+        public ICollection<Pokemon>? Evolutions { get; set; }
 
         public ICollection<Move> Moves { get; set; } = new List<Move>();
     }
