@@ -1,11 +1,13 @@
 using Microsoft.EntityFrameworkCore;
 using GSCMasterGuide.Domain.Entities;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 
 namespace GSCMasterGuide.Infrastructure.Data
 {
-    public class GSCDbContext : DbContext
+    public class GSCDbContext : IdentityDbContext<Trainer, IdentityRole<uint>, uint>
     {
-        public GSCDbContext(DbContextOptions<GSCDbContext> options) : base(options) {}
+        public GSCDbContext(DbContextOptions<GSCDbContext> options) : base(options) {  }
 
         public DbSet<Pokemon> Pokemon => Set<Pokemon>();
 
@@ -17,8 +19,14 @@ namespace GSCMasterGuide.Infrastructure.Data
 
         public DbSet<PokemonMember> PokemonMembers => Set<PokemonMember>();
 
+        public DbSet<PokemonTeam> PokemonTeams => Set<PokemonTeam>();
+
+        public DbSet<Trainer> Trainers => Set<Trainer>();
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
+            base.OnModelCreating(builder);
+
             builder.Entity<Pokemon>()
                 .HasMany(p => p.Moves)
                 .WithMany(m => m.EligiblePokemon)
