@@ -10,8 +10,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSCMasterGuide.Infrastructu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSCMasterGuide.Domain", "GSCMasterGuide.Domain\GSCMasterGuide.Domain.csproj", "{44DB2126-64C2-4A1F-992E-779FCA480A8F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSCMasterGuide.Application", "GSCMasterGuide.Application\GSCMasterGuide.Application.csproj", "{0F83E7BA-0E30-483D-929F-11D70DC97290}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
