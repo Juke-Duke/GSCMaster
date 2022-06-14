@@ -2,8 +2,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace GSCMasterGuide.API.Controllers
 {
-    [Route("/[controller]")]
     [ApiController]
+    [Route("/[controller]")]
     public class PokemonController : ControllerBase
     {
     }
