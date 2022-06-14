@@ -4,7 +4,7 @@ namespace GSCMasterGuide.Domain.Entities
     {
         public int Id { get; init; }
 
-        // public Trainer Trainer { get; set; } = null!;
+        public Trainer Trainer { get; set; } = null!;
 
         public string TeamName { get; set; } = null!;
 

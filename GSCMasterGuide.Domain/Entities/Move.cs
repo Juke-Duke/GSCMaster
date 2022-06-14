@@ -6,6 +6,8 @@ namespace GSCMasterGuide.Domain.Entities
 
         public string Name { get; set; } = null!;
 
+        public string ImageUrl { get; set; } = null!;
+
         public Type Type { get; set; } = Type.None;
 
         public Category Category { get; set; }

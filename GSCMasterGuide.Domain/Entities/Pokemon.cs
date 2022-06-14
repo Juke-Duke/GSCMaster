@@ -9,6 +9,8 @@ namespace GSCMasterGuide.Domain.Entities
 
         public string Name { get; set; } = null!;
 
+        public string ImageUrl { get; set; } = null!;
+
         public Type PrimaryType { get; set; } = Type.None;
 
         public Type SecondaryType { get; set; } = Type.None;
@@ -28,7 +30,7 @@ namespace GSCMasterGuide.Domain.Entities
         public int Speed { get; set; } = 0;
 
         public Pokemon? PreEvolution { get; set; }
-    
+
         [InverseProperty("PreEvolution")]
         public ICollection<Pokemon> Evolutions { get; set; } = new List<Pokemon>();
 
