@@ -4,6 +4,6 @@ namespace GSCMasterGuide.Domain.IRepositories
 {
     public interface IPokemonRepository
     {
-        Task<IReadOnlyCollection<BasicPokemonDTO>> GetAll();
+        Task<IReadOnlyCollection<BasicPokemonDTO>> GetAll(CancellationToken cancellationToken);
     }
 }

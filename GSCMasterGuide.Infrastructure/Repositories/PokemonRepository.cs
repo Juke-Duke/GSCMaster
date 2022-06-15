@@ -14,7 +14,7 @@ namespace GSCMasterGuide.Infrastructure.Repositories
             _dbContext = dbContext;
         }
 
-        public async Task<IReadOnlyCollection<BasicPokemonDTO>> GetAll()
+        public async Task<IReadOnlyCollection<BasicPokemonDTO>> GetAll(CancellationToken cancellationToken)
             => await _dbContext.Pokemon.Select(p => DTOConverter
                 .ConvertToBasic(p))
                 .ToListAsync();
