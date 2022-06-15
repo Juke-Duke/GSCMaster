@@ -10,7 +10,7 @@ namespace GSCMasterGuide.Infrastructure.Seed.Seeding
             if (context.Pokemon.Any())
                 return;
 
-            var lines = File.ReadAllLines("GSCMasterGuide.Infrastructure\\SeedData\\PokemonSeedData.csv");
+            var lines = File.ReadAllLines("..\\GSCMasterGuide.Infrastructure\\Seed\\SeedData\\PokemonSeedData.csv");
             lines = lines.Skip(1).ToArray();
 
             foreach (var line in lines)
@@ -28,62 +28,20 @@ namespace GSCMasterGuide.Infrastructure.Seed.Seeding
                     SpAttack = int.Parse(values[7]),
                     SpDefense = int.Parse(values[8]),
                     Speed = int.Parse(values[9]),
-                    Tier = (Tier)Enum.Parse(typeof(Tier), values[10])
+                    Tier = (Tier)Enum.Parse(typeof(Tier), values[11])
                 });
             }
             context.SaveChanges();
-        }
 
-        public static void SeedTest(GSCDbContext context)
-        {
-            if (context.Pokemon.Any())
-                return;
-
-            context.Pokemon.Add(new Pokemon
+            foreach (var line in lines)
             {
-                Name = "Eevee",
-                PrimaryType = Type.Normal,
-                SecondaryType = Type.None,
-                Tier = Tier.LC,
-                HP = 55,
-                Attack = 55,
-                Defense = 50,
-                SpAttack = 45,
-                SpDefense = 65,
-                Speed = 55,
-                PreEvolution = null
-            });
+                var values = line.Split(',');
 
-            context.SaveChanges();
-            context.Pokemon.Add(new Pokemon
-            {
-                Name = "Vaporeon",
-                PrimaryType = Type.Water,
-                SecondaryType = Type.None,
-                Tier = Tier.OU,
-                HP = 130,
-                Attack = 65,
-                Defense = 60,
-                SpAttack = 110,
-                SpDefense = 95,
-                Speed = 65,
-                PreEvolution = context.Pokemon.First(p => p.Name == "Eevee")
-            });
-
-            context.Pokemon.Add(new Pokemon
-            {
-                Name = "Jolteon",
-                PrimaryType = Type.Electric,
-                SecondaryType = Type.None,
-                Tier = Tier.UUBL,
-                HP = 65,
-                Attack = 65,
-                Defense = 60,
-                SpAttack = 110,
-                SpDefense = 95,
-                Speed = 130,
-                PreEvolution = context.Pokemon.First(p => p.Name == "Eevee")
-            });
+                context.Pokemon
+                .First(p => p.Name == values[1])
+                .PreEvolution = context.Pokemon
+                .FirstOrDefault(p => p.Name == values[10]);
+            }
 
             context.SaveChanges();
         }
