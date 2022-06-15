@@ -1,7 +1,7 @@
 using GSCMasterGuide.Infrastructure.Data;
 using GSCMasterGuide.Domain.Entities;
 
-namespace GSCMasterGuide.Infrastructure.Seeding
+namespace GSCMasterGuide.Infrastructure.Seed.Seeding
 {
     public class MoveSeed
     {
@@ -10,7 +10,7 @@ namespace GSCMasterGuide.Infrastructure.Seeding
             if (context.Moves.Any())
                 return;
 
-            var lines = File.ReadAllLines("Data\\SeedData\\MoveSeedData.csv");
+            var lines = File.ReadAllLines("GSCMasterGuide.Infrastructure\\Seed\\SeedData\\MoveSeedData.csv");
             lines = lines.Skip(1).ToArray();
 
             foreach (var line in lines)

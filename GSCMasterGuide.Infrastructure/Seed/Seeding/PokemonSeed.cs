@@ -1,7 +1,7 @@
 using GSCMasterGuide.Infrastructure.Data;
 using GSCMasterGuide.Domain.Entities;
 
-namespace GSCMasterGuide.Infrastructure.Seeding
+namespace GSCMasterGuide.Infrastructure.Seed.Seeding
 {
     public class PokemonSeed
     {
@@ -10,7 +10,7 @@ namespace GSCMasterGuide.Infrastructure.Seeding
             if (context.Pokemon.Any())
                 return;
 
-            var lines = File.ReadAllLines("..\\GSCMasterGuide.Infrastructure\\SeedData\\PokemonSeedData.csv");
+            var lines = File.ReadAllLines("GSCMasterGuide.Infrastructure\\SeedData\\PokemonSeedData.csv");
             lines = lines.Skip(1).ToArray();
 
             foreach (var line in lines)

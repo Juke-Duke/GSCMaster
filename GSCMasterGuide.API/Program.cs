@@ -1,7 +1,7 @@
 using GSCMasterGuide.Domain.IRepositories;
 using GSCMasterGuide.Infrastructure.Data;
 using GSCMasterGuide.Infrastructure.Repositories;
-using GSCMasterGuide.Infrastructure.Seeding;
+using GSCMasterGuide.Infrastructure.Seed.Seeding;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 

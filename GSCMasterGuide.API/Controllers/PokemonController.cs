@@ -1,7 +1,7 @@
 using GSCMasterGuide.API.Queries;
 using GSCMasterGuide.Domain.Entities;
-using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using MediatR;
 
 namespace GSCMasterGuide.Identity.Controllers
 {
@@ -12,9 +12,7 @@ namespace GSCMasterGuide.Identity.Controllers
         private readonly IMediator _mediator;
 
         public PokemonController(IMediator mediator)
-        {
-            _mediator = mediator;
-        }
+            => _mediator = mediator;
 
         [HttpGet]
         public async Task<ActionResult<IReadOnlyCollection<Pokemon>>> GetAllPokemon()

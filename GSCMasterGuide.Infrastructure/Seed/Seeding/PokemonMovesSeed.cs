@@ -1,7 +1,7 @@
 using GSCMasterGuide.Infrastructure.Data;
 using GSCMasterGuide.Domain.Entities;
 
-namespace GSCMasterGuide.Infrastructure.Seeding
+namespace GSCMasterGuide.Infrastructure.Seed.Seeding
 {
     public class PokemonMovesSeed
     {

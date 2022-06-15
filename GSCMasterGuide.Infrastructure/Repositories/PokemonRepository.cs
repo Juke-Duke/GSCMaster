@@ -1,5 +1,4 @@
 using GSCMasterGuide.Domain.DTOs;
-using GSCMasterGuide.Domain.Entities;
 using GSCMasterGuide.Domain.IRepositories;
 using GSCMasterGuide.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;

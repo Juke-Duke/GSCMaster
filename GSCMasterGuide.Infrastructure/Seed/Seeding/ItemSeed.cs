@@ -1,7 +1,7 @@
 using GSCMasterGuide.Infrastructure.Data;
 using GSCMasterGuide.Domain.Entities;
 
-namespace GSCMasterGuide.Infrastructure.Seeding
+namespace GSCMasterGuide.Infrastructure.Seed.Seeding
 {
     public class ItemSeed
     {
@@ -10,7 +10,7 @@ namespace GSCMasterGuide.Infrastructure.Seeding
             if (context.Items.Any())
                 return;
 
-            var lines = File.ReadAllLines("Data\\SeedData\\ItemSeedData.tsv");
+            var lines = File.ReadAllLines("GSCMasterGuide.Infrastructure\\Seed\\SeedData\\ItemSeedData.tsv");
             lines = lines.Skip(1).ToArray();
 
             foreach (var line in lines)
