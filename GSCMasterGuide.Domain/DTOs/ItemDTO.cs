@@ -1,9 +1,7 @@
-namespace GSCMasterGuide.Domain.Entities
+namespace GSCMasterGuide.Domain.DTOs
 {
-    public class Item
+    public class ItemDTO
     {
-        public int Id { get; init; }
-
         public string Name { get; set; } = null!;
 
         public string Description { get; set; } = null!;

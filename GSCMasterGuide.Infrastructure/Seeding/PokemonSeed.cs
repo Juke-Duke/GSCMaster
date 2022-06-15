@@ -22,13 +22,13 @@ namespace GSCMasterGuide.Infrastructure.Seeding
                     Name = values[1],
                     PrimaryType = (Type)Enum.Parse(typeof(Type), values[2]),
                     SecondaryType = values[3] == "None" ? Type.None : (Type)Enum.Parse(typeof(Type), values[3]),
-                    Tier = (Tier)Enum.Parse(typeof(Tier), values[4]),
-                    HP = int.Parse(values[5]),
-                    Attack = int.Parse(values[6]),
-                    Defense = int.Parse(values[7]),
-                    SpAttack = int.Parse(values[8]),
-                    SpDefense = int.Parse(values[9]),
-                    Speed = int.Parse(values[10]),
+                    HP = int.Parse(values[4]),
+                    Attack = int.Parse(values[5]),
+                    Defense = int.Parse(values[6]),
+                    SpAttack = int.Parse(values[7]),
+                    SpDefense = int.Parse(values[8]),
+                    Speed = int.Parse(values[9]),
+                    Tier = (Tier)Enum.Parse(typeof(Tier), values[10])
                 });
             }
             context.SaveChanges();

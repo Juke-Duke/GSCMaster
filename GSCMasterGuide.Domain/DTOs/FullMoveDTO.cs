@@ -1,9 +1,7 @@
-namespace GSCMasterGuide.Domain.Entities
+namespace GSCMasterGuide.Domain.DTOs
 {
-    public class Move
+    public class FullMoveDTO
     {
-        public int Id { get; init; }
-
         public string Name { get; set; } = null!;
 
         public Type Type { get; set; } = Type.None;
@@ -18,10 +16,10 @@ namespace GSCMasterGuide.Domain.Entities
 
         public int Priority { get; set; } = 0;
 
-        public string Effect { get; set; } = "";
+        public string Effect { get; set; } = null!;
 
-        public string Description { get; set; } = "";
+        public string Description { get; set; } = null!;
 
-        public ICollection<Pokemon> EligiblePokemon { get; set; } = new List<Pokemon>();
+        public IReadOnlyCollection<BasicPokemonDTO> EligiblePokemon { get; set; } = new List<BasicPokemonDTO>();
     }
 }

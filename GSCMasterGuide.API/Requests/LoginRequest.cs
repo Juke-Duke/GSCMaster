@@ -1,4 +1,4 @@
-namespace GSCMasterGuide.API.Requests
+namespace GSCMasterGuide.Identity.Requests
 {
     public record LoginRequest
     (
