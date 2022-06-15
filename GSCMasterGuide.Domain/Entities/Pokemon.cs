@@ -27,7 +27,7 @@ namespace GSCMasterGuide.Domain.Entities
 
         public int Speed { get; set; } = 0;
 
-        public Pokemon? PreEvolution { get; set; }
+        public Pokemon? PreEvolution { get; set; } = null;
 
         [InverseProperty("PreEvolution")]
         public ICollection<Pokemon> Evolutions { get; set; } = new List<Pokemon>();

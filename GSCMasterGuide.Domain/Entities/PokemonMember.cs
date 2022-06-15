@@ -4,7 +4,7 @@ namespace GSCMasterGuide.Domain.Entities
     {
         public uint Id { get; init; }
 
-        public string? Nickname { get; set; }
+        public string? Nickname { get; set; } = null;
 
         public Pokemon Pokemon { get; set; } = null!;
 
@@ -14,15 +14,15 @@ namespace GSCMasterGuide.Domain.Entities
 
         public bool IsShiny { get; set; } = false;
 
-        public Item? Item { get; set; }
+        public Item? Item { get; set; } = null;
 
-        public Move? MoveSlot1 { get; set; }
+        public Move? MoveSlot1 { get; set; } = null;
 
-        public Move? MoveSlot2 { get; set; }
+        public Move? MoveSlot2 { get; set; } = null;
 
-        public Move? MoveSlot3 { get; set; }
+        public Move? MoveSlot3 { get; set; } = null;
 
-        public Move? MoveSlot4 { get; set; }
+        public Move? MoveSlot4 { get; set; } = null;
 
         public int HPEV { get; set; } = 252;
 
