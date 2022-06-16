@@ -1,4 +1,4 @@
-using GSCMasterGuide.API.Queries;
+using GSCMasterGuide.API.Queries.Pokemon;
 using GSCMasterGuide.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 using MediatR;
