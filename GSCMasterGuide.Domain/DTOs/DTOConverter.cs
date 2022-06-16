@@ -37,7 +37,7 @@ namespace GSCMasterGuide.Domain.DTOs
                 SpAttack = pokemon.SpAttack,
                 SpDefense = pokemon.SpDefense,
                 Speed = pokemon.Speed,
-                Moves = pokemon.Moves.Select(m => ConvertToBasic(m)).ToList()
+                Moves = pokemon.Moves.Select(move => ConvertToBasic(move)).ToList()
             };
         
         public static FullMoveDTO ConvertToFull(Move move)
@@ -49,7 +49,7 @@ namespace GSCMasterGuide.Domain.DTOs
                 Accuracy = move.Accuracy,
                 PP = move.PP,
                 Description = move.Description,
-                EligiblePokemon = move.EligiblePokemon.Select(ep => ConvertToBasic(ep)).ToList()
+                EligiblePokemon = move.EligiblePokemon.Select(eligiblePokemon => ConvertToBasic(eligiblePokemon)).ToList()
             };
 
         public static ItemDTO Convert(Item item)
