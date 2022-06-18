@@ -1,12 +1,11 @@
 using GSCMasterGuide.API.Queries.Pokemon;
-using GSCMasterGuide.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 using MediatR;
 
-namespace GSCMasterGuide.Identity.Controllers
+namespace GSCMasterGuide.API.Controllers
 {
     [ApiController]
-    [Route("/[controller]")]
+    [Route("/pokemon")]
     public class PokemonController : ControllerBase
     {
         private readonly IMediator _mediator;
@@ -15,7 +14,15 @@ namespace GSCMasterGuide.Identity.Controllers
             => _mediator = mediator;
 
         [HttpGet]
-        public async Task<ActionResult<IReadOnlyCollection<Pokemon>>> GetAllPokemon()
-            => Ok(await _mediator.Send(new GetAllPokemonQuery()));
+        public async Task<IActionResult> GetAllPokemon(CancellationToken cancellationToken)
+            => Ok(await _mediator.Send(new GetAllPokemonQuery(), cancellationToken));
+
+        [HttpGet("{name}")]
+        public async Task<IActionResult> GetPokemon(string name, CancellationToken cancellationToken)
+        {
+            var pokemon = await _mediator.Send(new GetPokemonQuery(name), cancellationToken);
+
+            return pokemon is not null ? Ok(pokemon) : NotFound();
+        }
     }
 }
