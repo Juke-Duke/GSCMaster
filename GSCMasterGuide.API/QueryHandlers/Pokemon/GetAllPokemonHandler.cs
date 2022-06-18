@@ -1,4 +1,3 @@
-
 using GSCMasterGuide.Domain.DTOs;
 using GSCMasterGuide.Domain.IRepositories;
 using GSCMasterGuide.API.Queries.Pokemon;
