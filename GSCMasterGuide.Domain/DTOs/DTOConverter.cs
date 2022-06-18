@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using GSCMasterGuide.Domain.Entities;
 
 namespace GSCMasterGuide.Domain.DTOs
@@ -12,7 +13,7 @@ namespace GSCMasterGuide.Domain.DTOs
                 PrimaryType = pokemon.PrimaryType,
                 SecondaryType = pokemon.SecondaryType
             };
-        
+
         public static BasicMoveDTO ConvertToBasic(Move move)
             => new BasicMoveDTO
             {
@@ -24,8 +25,8 @@ namespace GSCMasterGuide.Domain.DTOs
                 Description = move.Description
             };
 
-        public static FullPokemonDTO ConvertToFull(Pokemon pokemon)
-            => new FullPokemonDTO
+        public static FullPokemonDTO? ConvertToFull(Pokemon? pokemon)
+            => pokemon is null ? null : new FullPokemonDTO
             {
                 NationalNumber = pokemon.NationalNumber,
                 Name = pokemon.Name,
@@ -37,9 +38,10 @@ namespace GSCMasterGuide.Domain.DTOs
                 SpAttack = pokemon.SpAttack,
                 SpDefense = pokemon.SpDefense,
                 Speed = pokemon.Speed,
+                EvolutionLine = GetEvolutionLine(pokemon),
                 Moves = pokemon.Moves.Select(move => ConvertToBasic(move)).ToList()
             };
-        
+
         public static FullMoveDTO ConvertToFull(Move move)
             => new FullMoveDTO
             {
@@ -59,5 +61,39 @@ namespace GSCMasterGuide.Domain.DTOs
                 Description = item.Description,
                 IsConsumable = item.IsConsumable
             };
+
+        public static IReadOnlyCollection<BasicPokemonDTO> GetEvolutionLine(Pokemon pokemon)
+        {
+            var currMon = pokemon;
+            var evolutionLine = new List<BasicPokemonDTO>();
+
+            while (currMon.PreEvolution is not null)
+                currMon = currMon.PreEvolution;
+
+            while (currMon is not null)
+            {
+                evolutionLine.Add(ConvertToBasic(currMon));
+
+                if (currMon.Evolution.Count == 0)
+                    break;
+                else if (currMon.Evolution.Count == 1)
+                    currMon = currMon.Evolution.First();
+                else
+                {
+                    var evoStage = new List<BasicPokemonDTO>();
+
+                    foreach (var evolution in currMon.Evolution)
+                        evoStage.Add(ConvertToBasic(evolution));
+                    
+                    evoStage = evoStage.OrderBy(evo => evo.NationalNumber).ToList();
+
+                    evolutionLine.AddRange(evoStage);
+
+                    break;
+                }
+            }
+
+            return evolutionLine;
+        }
     }
 }

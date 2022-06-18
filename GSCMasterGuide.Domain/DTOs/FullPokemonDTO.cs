@@ -22,6 +22,8 @@ namespace GSCMasterGuide.Domain.DTOs
 
         public int Speed { get; set; } = 0;
 
+        public IReadOnlyCollection<BasicPokemonDTO> EvolutionLine { get; set; } = null!;
+
         public IReadOnlyCollection<BasicMoveDTO> Moves { get; set; } = new List<BasicMoveDTO>();
     }
 }

@@ -30,7 +30,7 @@ namespace GSCMasterGuide.Domain.Entities
         public Pokemon? PreEvolution { get; set; } = null;
 
         [InverseProperty("PreEvolution")]
-        public ICollection<Pokemon> Evolutions { get; set; } = new List<Pokemon>();
+        public ICollection<Pokemon> Evolution { get; set; } = new List<Pokemon>();
 
         public ICollection<Move> Moves { get; set; } = new List<Move>();
     }
