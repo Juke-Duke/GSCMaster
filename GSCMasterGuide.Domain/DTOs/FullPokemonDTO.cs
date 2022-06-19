@@ -10,6 +10,8 @@ namespace GSCMasterGuide.Domain.DTOs
 
         public Type SecondaryType { get; set; } = Type.None;
 
+        public Tier Tier { get; set; }
+
         public int HP { get; set; } = 0;
 
         public int Attack { get; set; } = 0;

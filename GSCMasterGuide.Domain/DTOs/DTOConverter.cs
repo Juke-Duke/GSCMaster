@@ -1,4 +1,3 @@
-using System.Runtime.CompilerServices;
 using GSCMasterGuide.Domain.Entities;
 
 namespace GSCMasterGuide.Domain.DTOs
@@ -11,7 +10,8 @@ namespace GSCMasterGuide.Domain.DTOs
                 NationalNumber = pokemon.NationalNumber,
                 Name = pokemon.Name,
                 PrimaryType = pokemon.PrimaryType,
-                SecondaryType = pokemon.SecondaryType
+                SecondaryType = pokemon.SecondaryType,
+                Tier = pokemon.Tier
             };
 
         public static BasicMoveDTO ConvertToBasic(Move move)
@@ -19,6 +19,7 @@ namespace GSCMasterGuide.Domain.DTOs
             {
                 Name = move.Name,
                 Type = move.Type,
+                Category = move.Category,
                 Power = move.Power,
                 Accuracy = move.Accuracy,
                 PP = move.PP,
@@ -32,6 +33,7 @@ namespace GSCMasterGuide.Domain.DTOs
                 Name = pokemon.Name,
                 PrimaryType = pokemon.PrimaryType,
                 SecondaryType = pokemon.SecondaryType,
+                Tier = pokemon.Tier,
                 HP = pokemon.HP,
                 Attack = pokemon.Attack,
                 Defense = pokemon.Defense,
@@ -42,14 +44,16 @@ namespace GSCMasterGuide.Domain.DTOs
                 Moves = pokemon.Moves.Select(move => ConvertToBasic(move)).ToList()
             };
 
-        public static FullMoveDTO ConvertToFull(Move move)
-            => new FullMoveDTO
+        public static FullMoveDTO? ConvertToFull(Move? move)
+            => move is null ? null : new FullMoveDTO
             {
                 Name = move.Name,
                 Type = move.Type,
+                Category = move.Category,
                 Power = move.Power,
                 Accuracy = move.Accuracy,
                 PP = move.PP,
+                Effect = move.Effect,
                 Description = move.Description,
                 EligiblePokemon = move.EligiblePokemon.Select(eligiblePokemon => ConvertToBasic(eligiblePokemon)).ToList()
             };
@@ -80,12 +84,10 @@ namespace GSCMasterGuide.Domain.DTOs
                     currMon = currMon.Evolution.First();
                 else
                 {
-                    var evoStage = new List<BasicPokemonDTO>();
-
-                    foreach (var evolution in currMon.Evolution)
-                        evoStage.Add(ConvertToBasic(evolution));
-                    
-                    evoStage = evoStage.OrderBy(evo => evo.NationalNumber).ToList();
+                    var evoStage = currMon.Evolution
+                        .OrderBy(evo => evo.NationalNumber)
+                        .Select(evo => ConvertToBasic(evo))
+                        .ToList();
 
                     evolutionLine.AddRange(evoStage);
 

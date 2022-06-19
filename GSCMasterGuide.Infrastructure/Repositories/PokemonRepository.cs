@@ -15,16 +15,17 @@ namespace GSCMasterGuide.Infrastructure.Repositories
         }
 
         public async Task<IReadOnlyCollection<BasicPokemonDTO>> GetAll(CancellationToken cancellationToken)
-            => await _dbContext.Pokemon.Select(pokemon => DTOConverter
+            => await _dbContext.Pokemon.AsNoTracking()
+                .Select(pokemon => DTOConverter
                 .ConvertToBasic(pokemon))
                 .ToListAsync(cancellationToken);
-        
+
         public async Task<FullPokemonDTO?> Get(string name, CancellationToken cancellationToken)
             => DTOConverter
                 .ConvertToFull(await _dbContext.Pokemon
                 .Include(pokemon => pokemon.PreEvolution)
-                .ThenInclude(preEvo => preEvo.Evolution)
-                .Include(pokemon => pokemon.PreEvolution.PreEvolution)
+                .ThenInclude(preEvo => preEvo != null ? preEvo.Evolution : null)
+                .Include(pokemon => pokemon.PreEvolution != null ? pokemon.PreEvolution.PreEvolution : null)
                 .Include(pokemon => pokemon.Evolution)
                 .ThenInclude(evo => evo.Evolution)
                 .FirstOrDefaultAsync(pokemon => pokemon.Name == name, cancellationToken));

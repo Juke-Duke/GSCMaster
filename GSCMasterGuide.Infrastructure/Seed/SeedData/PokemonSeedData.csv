@@ -180,7 +180,7 @@ NationalNumber,Name,PrimaryType,SecondaryType,HP,Attack,Defense,SpAttack,SpAttac
 179,Mareep,Electric,None,55,40,40,65,45,35,,LC
 180,Flaaffy,Electric,None,70,55,55,80,60,45,Mareep,NU
 181,Ampharos,Electric,None,90,75,85,115,90,55,Flaaffy,UU
-182,Bellossom,Grass,None,75,80,95,90,100,50,,UU
+182,Bellossom,Grass,None,75,80,95,90,100,50,Gloom,UU
 183,Marill,Water,Normal,70,20,50,20,50,40,,LC
 184,Azumarill,Water,Normal,100,50,80,60,80,50,Marill,NU
 185,Sudowoodo,Rock,None,70,100,115,30,65,30,,NU

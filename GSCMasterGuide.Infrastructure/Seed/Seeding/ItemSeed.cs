@@ -10,7 +10,7 @@ namespace GSCMasterGuide.Infrastructure.Seed.Seeding
             if (context.Items.Any())
                 return;
 
-            var lines = File.ReadAllLines("GSCMasterGuide.Infrastructure\\Seed\\SeedData\\ItemSeedData.tsv");
+            var lines = File.ReadAllLines("..\\GSCMasterGuide.Infrastructure\\Seed\\SeedData\\ItemSeedData.tsv");
             lines = lines.Skip(1).ToArray();
 
             foreach (var line in lines)

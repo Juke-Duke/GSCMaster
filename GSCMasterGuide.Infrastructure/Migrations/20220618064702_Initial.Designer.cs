@@ -12,14 +12,14 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GSCMasterGuide.Infrastructure.Migrations
 {
     [DbContext(typeof(GSCDbContext))]
-    [Migration("20220615002647_Initial")]
+    [Migration("20220618064702_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.5")
+                .HasAnnotation("ProductVersion", "6.0.6")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
@@ -326,7 +326,7 @@ namespace GSCMasterGuide.Infrastructure.Migrations
             modelBuilder.Entity("GSCMasterGuide.Domain.Entities.Pokemon", b =>
                 {
                     b.HasOne("GSCMasterGuide.Domain.Entities.Pokemon", "PreEvolution")
-                        .WithMany("Evolutions")
+                        .WithMany("Evolution")
                         .HasForeignKey("PreEvolutionNationalNumber");
 
                     b.Navigation("PreEvolution");
@@ -441,7 +441,7 @@ namespace GSCMasterGuide.Infrastructure.Migrations
 
             modelBuilder.Entity("GSCMasterGuide.Domain.Entities.Pokemon", b =>
                 {
-                    b.Navigation("Evolutions");
+                    b.Navigation("Evolution");
                 });
 
             modelBuilder.Entity("GSCMasterGuide.Domain.Entities.Trainer", b =>

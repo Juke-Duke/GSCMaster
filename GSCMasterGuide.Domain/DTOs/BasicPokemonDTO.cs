@@ -9,5 +9,7 @@ namespace GSCMasterGuide.Domain.DTOs
         public Type PrimaryType { get; set; } = Type.None;
 
         public Type SecondaryType { get; set; } = Type.None;
+
+        public Tier Tier { get; set; }
     }
 }
