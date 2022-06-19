@@ -1,0 +1,26 @@
+using GSCMasterGuide.API.Queries.Moves;
+using Microsoft.AspNetCore.Mvc;
+using MediatR;
+
+namespace GSCMasterGuide.API.Controllers
+{
+    [ApiController]
+    [Route("/move")]
+    public class MoveController : ControllerBase
+    {
+        private readonly IMediator _mediator;
+
+        public MoveController(IMediator mediator)
+        {
+            _mediator = mediator;
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetAllMoves()
+         => Ok(await _mediator.Send(new GetAllMovesQuery()));
+
+        [HttpGet("{name}")]
+        public async Task<IActionResult> GetMove(string name)
+         => Ok(await _mediator.Send(new GetMoveQuery(name)));
+    }
+}
