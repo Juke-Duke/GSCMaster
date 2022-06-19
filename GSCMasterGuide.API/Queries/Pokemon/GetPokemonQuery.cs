@@ -3,7 +3,7 @@ using MediatR;
 
 namespace GSCMasterGuide.API.Queries.Pokemon
 {
-    public class GetPokemonQuery : IRequest<FullPokemonDTO>
+    public class GetPokemonQuery : IRequest<FullPokemonDTO?>
     {
         public string Name { get; set; } = null!;
 

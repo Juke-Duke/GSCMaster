@@ -3,7 +3,5 @@ using MediatR;
 
 namespace GSCMasterGuide.API.Queries.Pokemon
 {
-    public class GetAllPokemonQuery : IRequest<IReadOnlyCollection<BasicPokemonDTO>>
-    {
-    }
+    public class GetAllPokemonQuery : IRequest<IReadOnlyCollection<BasicPokemonDTO>> {}
 }
