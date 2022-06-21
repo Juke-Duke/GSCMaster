@@ -16,7 +16,7 @@ namespace GSCMasterGuide.Domain.Entities
 
         public Item? Item { get; set; } = null;
 
-        public Move? MoveSlot1 { get; set; } = null;
+        public Move MoveSlot1 { get; set; } = null!;
 
         public Move? MoveSlot2 { get; set; } = null;
 

@@ -25,9 +25,9 @@ namespace GSCMasterGuide.Infrastructure.Data
         {
             base.OnModelCreating(builder);
 
-            builder.Entity<Pokemon>()
-                .HasMany(p => p.Moves)
-                .WithMany(m => m.EligiblePokemon)
+            builder.Entity<Move>()
+                .HasMany(m => m.EligiblePokemon)
+                .WithMany(p => p.Moves)
                 .UsingEntity<PokemonMove>();
         }
     }
