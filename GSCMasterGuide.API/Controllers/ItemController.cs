@@ -21,6 +21,10 @@ namespace GSCMasterGuide.API.Controllers
 
         [HttpGet("{name}")]
         public async Task<IActionResult> GetItem(string name)
-         => Ok(await _mediator.Send(new GetItemQuery(name)));   
+        {
+            var item = await _mediator.Send(new GetItemQuery(name));
+
+            return item is not null ? Ok(item) : NotFound();
+        }
     }
 }

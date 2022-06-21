@@ -21,6 +21,10 @@ namespace GSCMasterGuide.API.Controllers
 
         [HttpGet("{name}")]
         public async Task<IActionResult> GetMove(string name)
-         => Ok(await _mediator.Send(new GetMoveQuery(name)));
+        {
+            var move = await _mediator.Send(new GetMoveQuery(name));
+
+            return move is not null ? Ok(move) : NotFound();
+        }
     }
 }

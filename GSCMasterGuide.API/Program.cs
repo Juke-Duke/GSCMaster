@@ -8,10 +8,13 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddControllers();
-builder.Services.AddControllers().AddJsonOptions(x => x.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()));
+builder.Services.AddControllers()
+                .AddJsonOptions(x => x.JsonSerializerOptions.Converters
+                .Add(new JsonStringEnumConverter()));
 
-builder.Services.AddDbContext<GSCDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("GSCDb")));
+builder.Services.AddDbContext<GSCDbContext>(options => options
+                .UseSqlServer(builder.Configuration
+                .GetConnectionString("GSCDb")));
 
 builder.Services.AddScoped<IPokemonRepository, PokemonRepository>();
 builder.Services.AddScoped<IMoveRepository, MoveRepository>();
@@ -21,6 +24,8 @@ builder.Services.AddMediatR(typeof(Program).Assembly);
 var app = builder.Build();
 
 app.UseHttpsRedirection();
+
+app.UseCors();
 
 app.UseAuthorization();
 
