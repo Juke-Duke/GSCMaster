@@ -1,10 +1,13 @@
+using System.Text;
 using System.Text.Json.Serialization;
 using GSCMasterGuide.Domain.IRepositories;
 using GSCMasterGuide.Infrastructure.Data;
 using GSCMasterGuide.Infrastructure.Repositories;
 using GSCMasterGuide.Infrastructure.Seed.Seeding;
 using MediatR;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,10 +19,26 @@ builder.Services.AddDbContext<GSCDbContext>(options => options
                 .UseSqlServer(builder.Configuration
                 .GetConnectionString("GSCDb")));
 
-builder.Services.AddScoped<IPokemonRepository, PokemonRepository>();
-builder.Services.AddScoped<IMoveRepository, MoveRepository>();
-builder.Services.AddScoped<IItemRepository, ItemRepository>();
-builder.Services.AddMediatR(typeof(Program).Assembly);
+builder.Services.AddScoped<IPokemonRepository, PokemonRepository>()
+                .AddScoped<IMoveRepository, MoveRepository>()
+                .AddScoped<IItemRepository, ItemRepository>()
+                .AddMediatR(typeof(Program).Assembly);
+
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+})
+.AddJwtBearer(options =>
+{
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuer = false,
+        ValidateAudience = false,
+        ValidateLifetime = true,
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWTSettings:SecretKey"]))
+    };
+});
 
 var app = builder.Build();
 
@@ -27,6 +46,7 @@ app.UseHttpsRedirection();
 
 app.UseCors();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
