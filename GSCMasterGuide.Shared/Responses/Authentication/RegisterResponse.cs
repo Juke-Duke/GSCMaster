@@ -7,6 +7,7 @@ namespace GSCMasterGuide.Shared.Responses.Authentication
         Status Status,
         string? Email = null,
         string? Username = null,
-        string? Token = null
+        string? Token = null,
+        DateTime? Expires = null
     );
 }

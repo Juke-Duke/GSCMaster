@@ -18,17 +18,17 @@ namespace GSCMasterGuide.Infrastructure.Controllers
         }
 
         [HttpPost("register")]
-        public async Task<ActionResult<RegisterResponse>> Register([FromBody] RegisterRequest request)
+        public async Task<ActionResult<RegisterResponse>> Register([FromBody] RegisterRequest request, CancellationToken cancellationToken)
         {
-            var response = await _mediator.Send(new RegisterCommand(request.Email, request.Username, request.Password, request.ConfirmPassword));
+            var response = await _mediator.Send(new RegisterCommand(request.Email, request.Username, request.Password, request.ConfirmPassword), cancellationToken);
 
             return Ok(response);
         }
 
         [HttpPost("login")]
-        public async Task<ActionResult<LoginResponse>> Login([FromBody] LoginRequest request)
+        public async Task<ActionResult<LoginResponse>> Login([FromBody] LoginRequest request, CancellationToken cancellationToken)
         {
-            var response = await _mediator.Send(new LoginCommand(request.Username, request.Password));
+            var response = await _mediator.Send(new LoginCommand(request.Username, request.Password), cancellationToken);
 
             return Ok(response);
         }

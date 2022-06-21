@@ -1,0 +1,15 @@
+using Microsoft.AspNetCore.Mvc;
+using MediatR;
+
+namespace GSCMasterGuide.Infrastructure.Controllers
+{
+    [ApiController]
+    [Route("/teams")]
+    public class PokemonTeamController : ControllerBase
+    {
+        private readonly IMediator _mediator;
+
+        public PokemonTeamController(IMediator mediator)
+            => _mediator = mediator;
+    }
+}

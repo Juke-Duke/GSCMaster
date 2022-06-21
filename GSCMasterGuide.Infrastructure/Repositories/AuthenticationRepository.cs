@@ -46,7 +46,7 @@ namespace GSCMasterGuide.Infrastructure.Repositories
             await _context.Trainers.AddAsync(trainer);
             await _context.SaveChangesAsync();
 
-            return new RegisterResponse(Status.Success, trainer.Email, trainer.Username, GenerateToken());
+            return new RegisterResponse(Status.Success, trainer.Email, trainer.Username, GenerateToken(), DateTime.Now.AddDays(30));
         }
 
         public async Task<LoginResponse> Login(LoginRequest request, CancellationToken cancellationToken)
@@ -56,7 +56,7 @@ namespace GSCMasterGuide.Infrastructure.Repositories
             if (trainer is null || trainer.Password != request.Password)
                 return new LoginResponse(Status.UsernameOrPasswordInvalid);
 
-            return new LoginResponse(Status.Success, trainer.Username, GenerateToken());
+            return new LoginResponse(Status.Success, trainer.Username, GenerateToken(), DateTime.Now.AddDays(30));
         }
 
         private string GenerateToken()
