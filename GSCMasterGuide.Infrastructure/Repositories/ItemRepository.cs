@@ -19,12 +19,12 @@ namespace GSCMasterGuide.Infrastructure.Repositories
                 .Select(item => DTOConverter
                 .Convert(item))
                 .ToListAsync(cancellationToken);
-        
+
         public async Task<ItemDTO?> Get(string name, CancellationToken cancellationToken)
         {
             var item = await _context.Items.AsNoTracking()
                 .FirstOrDefaultAsync(i => i.Name == name, cancellationToken);
-            
+
             return item is not null ? DTOConverter.Convert(item) : null;
         }
     }

@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\GSCMasterGuide.Shared\GSCMasterGuide.Shared.csproj" />
+  </ItemGroup>
+
 </Project>
