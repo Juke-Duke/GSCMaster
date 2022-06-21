@@ -1,43 +1,36 @@
-using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
-using System.Text;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.IdentityModel.Tokens;
-using GSCMasterGuide.Shared.Responses;
 using MediatR;
+using GSCMasterGuide.Shared.Requests.Authentication;
+using GSCMasterGuide.Shared.Responses.Authentication;
+using GSCMasterGuide.API.Commands.Authentication;
 
-namespace GSCMasterGuide.API.Controllers
+namespace GSCMasterGuide.Infrastructure.Controllers
 {
     [ApiController]
     [Route("/auth")]
     public class AuthenticationController : ControllerBase
     {
         private readonly IMediator _mediator;
-        private readonly IConfiguration _config;
-        private readonly SymmetricSecurityKey key;
 
         public AuthenticationController(IMediator mediator, IConfiguration config)
         {
             _mediator = mediator;
-            _config = config;
-            key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["JWTSettings:SecretKey"]));
         }
 
-        [HttpPost]
-        [Route("login")]
-        public ActionResult<LoginResponse> Login(CancellationToken cancellationToken)
+        [HttpPost("register")]
+        public async Task<ActionResult<RegisterResponse>> Register([FromBody] RegisterRequest request)
         {
-            var signinCredentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-            var tokeOptions = new JwtSecurityToken
-            (
-                claims: new List<Claim>(),
-                expires: DateTime.Now.AddDays(30),
-                signingCredentials: signinCredentials
-            );
+            var response = await _mediator.Send(new RegisterCommand(request.Email, request.Username, request.Password, request.ConfirmPassword));
 
-            var tokenString = new JwtSecurityTokenHandler().WriteToken(tokeOptions);
+            return Ok(response);
+        }
 
-            return Ok(new LoginResponse { Token = tokenString });
+        [HttpPost("login")]
+        public async Task<ActionResult<LoginResponse>> Login([FromBody] LoginRequest request)
+        {
+            var response = await _mediator.Send(new LoginCommand(request.Username, request.Password));
+
+            return Ok(response);
         }
     }
 }

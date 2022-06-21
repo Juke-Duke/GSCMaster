@@ -1,8 +1,8 @@
-using GSCMasterGuide.API.Queries.Items;
+using GSCMasterGuide.Infrastructure.Queries.Items;
 using Microsoft.AspNetCore.Mvc;
 using MediatR;
 
-namespace GSCMasterGuide.API.Controllers
+namespace GSCMasterGuide.Infrastructure.Controllers
 {
     [ApiController]
     [Route("/item")]

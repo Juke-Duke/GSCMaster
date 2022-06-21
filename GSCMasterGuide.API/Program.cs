@@ -19,7 +19,8 @@ builder.Services.AddDbContext<GSCDbContext>(options => options
                 .UseSqlServer(builder.Configuration
                 .GetConnectionString("GSCDb")));
 
-builder.Services.AddScoped<IPokemonRepository, PokemonRepository>()
+builder.Services.AddScoped<IAuthenticationRepository, AuthenticationRepository>()
+                .AddScoped<IPokemonRepository, PokemonRepository>()
                 .AddScoped<IMoveRepository, MoveRepository>()
                 .AddScoped<IItemRepository, ItemRepository>()
                 .AddMediatR(typeof(Program).Assembly);

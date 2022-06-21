@@ -1,9 +1,9 @@
 using GSCMasterGuide.Domain.DTOs;
 using GSCMasterGuide.Domain.IRepositories;
-using GSCMasterGuide.API.Queries.Pokemon;
+using GSCMasterGuide.Infrastructure.Queries.Pokemon;
 using MediatR;
 
-namespace GSCMasterGuide.API.QueryHandlers
+namespace GSCMasterGuide.Infrastructure.QueryHandlers
 {
     public class GetAllPokemonHandler : IRequestHandler<GetAllPokemonQuery, IReadOnlyCollection<BasicPokemonDTO>>
     {

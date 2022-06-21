@@ -1,8 +1,8 @@
-using GSCMasterGuide.API.Queries.Pokemon;
+using GSCMasterGuide.Infrastructure.Queries.Pokemon;
 using Microsoft.AspNetCore.Mvc;
 using MediatR;
 
-namespace GSCMasterGuide.API.Controllers
+namespace GSCMasterGuide.Infrastructure.Controllers
 {
     [ApiController]
     [Route("/pokemon")]

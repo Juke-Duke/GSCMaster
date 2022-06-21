@@ -1,7 +1,7 @@
 using GSCMasterGuide.Domain.DTOs;
 using MediatR;
 
-namespace GSCMasterGuide.API.Queries.Moves
+namespace GSCMasterGuide.Infrastructure.Queries.Moves
 {
-    public class GetAllMovesQuery : IRequest<IReadOnlyCollection<BasicMoveDTO>> {}
+    public class GetAllMovesQuery : IRequest<IReadOnlyCollection<BasicMoveDTO>> { }
 }

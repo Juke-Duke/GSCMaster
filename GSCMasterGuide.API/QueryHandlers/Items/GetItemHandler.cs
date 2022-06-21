@@ -1,9 +1,9 @@
-using GSCMasterGuide.API.Queries.Items;
+using GSCMasterGuide.Infrastructure.Queries.Items;
 using GSCMasterGuide.Domain.DTOs;
 using GSCMasterGuide.Domain.IRepositories;
 using MediatR;
 
-namespace GSCMasterGuide.API.QueryHandlers.Items
+namespace GSCMasterGuide.Infrastructure.QueryHandlers.Items
 {
     public class GetItemHandler : IRequestHandler<GetItemQuery, ItemDTO?>
     {

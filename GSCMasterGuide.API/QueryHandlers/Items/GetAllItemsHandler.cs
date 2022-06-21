@@ -1,9 +1,9 @@
-using GSCMasterGuide.API.Queries.Items;
+using GSCMasterGuide.Infrastructure.Queries.Items;
 using GSCMasterGuide.Domain.DTOs;
 using GSCMasterGuide.Domain.IRepositories;
 using MediatR;
 
-namespace GSCMasterGuide.API.QueryHandlers.Items
+namespace GSCMasterGuide.Infrastructure.QueryHandlers.Items
 {
     public class GetAllItemsHandler : IRequestHandler<GetAllItemsQuery, IReadOnlyCollection<ItemDTO>>
     {
@@ -15,6 +15,6 @@ namespace GSCMasterGuide.API.QueryHandlers.Items
         }
 
         public async Task<IReadOnlyCollection<ItemDTO>> Handle(GetAllItemsQuery request, CancellationToken cancellationToken)
-            => await _itemRepository.GetAll(cancellationToken);        
+            => await _itemRepository.GetAll(cancellationToken);
     }
 }

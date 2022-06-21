@@ -1,9 +1,9 @@
-using GSCMasterGuide.API.Queries.Moves;
+using GSCMasterGuide.Infrastructure.Queries.Moves;
 using GSCMasterGuide.Domain.DTOs;
 using GSCMasterGuide.Domain.IRepositories;
 using MediatR;
 
-namespace GSCMasterGuide.API.QueryHandlers.Moves
+namespace GSCMasterGuide.Infrastructure.QueryHandlers.Moves
 {
     public class GetMoveHandler : IRequestHandler<GetMoveQuery, FullMoveDTO?>
     {

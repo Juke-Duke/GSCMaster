@@ -1,7 +1,7 @@
 using GSCMasterGuide.Domain.DTOs;
 using MediatR;
 
-namespace GSCMasterGuide.API.Queries.Items
+namespace GSCMasterGuide.Infrastructure.Queries.Items
 {
     public class GetItemQuery : IRequest<ItemDTO?>
     {

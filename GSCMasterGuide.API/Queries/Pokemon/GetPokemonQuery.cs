@@ -1,7 +1,7 @@
 using GSCMasterGuide.Domain.DTOs;
 using MediatR;
 
-namespace GSCMasterGuide.API.Queries.Pokemon
+namespace GSCMasterGuide.Infrastructure.Queries.Pokemon
 {
     public class GetPokemonQuery : IRequest<FullPokemonDTO?>
     {

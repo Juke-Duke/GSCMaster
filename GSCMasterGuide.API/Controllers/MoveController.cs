@@ -1,8 +1,8 @@
-using GSCMasterGuide.API.Queries.Moves;
+using GSCMasterGuide.Infrastructure.Queries.Moves;
 using Microsoft.AspNetCore.Mvc;
 using MediatR;
 
-namespace GSCMasterGuide.API.Controllers
+namespace GSCMasterGuide.Infrastructure.Controllers
 {
     [ApiController]
     [Route("/move")]

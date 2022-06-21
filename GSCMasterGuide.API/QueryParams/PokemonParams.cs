@@ -2,7 +2,7 @@ using GSCMasterGuide.Domain.Entities;
 using GSCMasterGuide.Domain.Enums;
 using Type = GSCMasterGuide.Domain.Enums.Type;
 
-namespace GSCMasterGuide.API.QueryParams
+namespace GSCMasterGuide.Infrastructure.QueryParams
 {
     public class PokemonParams
     {
