@@ -1,11 +1,13 @@
 using Microsoft.EntityFrameworkCore;
 using GSCMasterGuide.Domain.Entities;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 
 namespace GSCMasterGuide.Infrastructure.Data
 {
-    public class GSCDbContext : DbContext
+    public class GSCDbContext : IdentityDbContext<Trainer, IdentityRole<uint>, uint> // Specify the type of user and data type for Ids
     {
-        public GSCDbContext(DbContextOptions<GSCDbContext> options) : base(options) {}
+        public GSCDbContext(DbContextOptions<GSCDbContext> options) : base(options) { }
 
         public DbSet<Pokemon> Pokemon => Set<Pokemon>();
 

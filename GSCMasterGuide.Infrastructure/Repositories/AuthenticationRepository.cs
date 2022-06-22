@@ -28,17 +28,18 @@ namespace GSCMasterGuide.Infrastructure.Repositories
 
         public async Task<RegisterResponse> Register(RegisterRequest request, CancellationToken cancellationToken)
         {
+            // TODO: use UserManager<Trainer> to create a new user
             if (request.ConfirmPassword != request.Password)
                 return new RegisterResponse(Status.PasswordConfirmationFailed);
             else if (_context.Trainers.Any(t => t.Email == request.Email))
                 return new RegisterResponse(Status.EmailAlreadyExists);
-            else if (_context.Trainers.Any(t => t.Username == request.Username))
+            else if (_context.Trainers.Any(t => t.UserName == request.Username))
                 return new RegisterResponse(Status.UsernameAlreadyExists);
 
             var trainer = new Trainer
             {
                 Email = request.Email,
-                Username = request.Username,
+                UserName = request.Username,
                 Password = request.Password,
                 CreatedAtDate = DateTime.Now
             };
@@ -46,17 +47,18 @@ namespace GSCMasterGuide.Infrastructure.Repositories
             await _context.Trainers.AddAsync(trainer);
             await _context.SaveChangesAsync();
 
-            return new RegisterResponse(Status.Success, trainer.Email, trainer.Username, GenerateToken(), DateTime.Now.AddDays(30));
+            return new RegisterResponse(Status.Success, trainer.Email, trainer.UserName, GenerateToken(), DateTime.Now.AddDays(30));
         }
 
         public async Task<LoginResponse> Login(LoginRequest request, CancellationToken cancellationToken)
         {
-            var trainer = await _context.Trainers.FirstOrDefaultAsync(t => t.Username == request.Username);
+            // TODO Use SignInManager<Trainer> to log in a user/validate credentials
+            var trainer = await _context.Trainers.FirstOrDefaultAsync(t => t.UserName == request.Username);
 
             if (trainer is null || trainer.Password != request.Password)
                 return new LoginResponse(Status.UsernameOrPasswordInvalid);
 
-            return new LoginResponse(Status.Success, trainer.Username, GenerateToken(), DateTime.Now.AddDays(30));
+            return new LoginResponse(Status.Success, trainer.UserName, GenerateToken(), DateTime.Now.AddDays(30));
         }
 
         private string GenerateToken()
