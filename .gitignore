@@ -1,0 +1,16 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/GSCMasterGuide.API/bin/Debug/net6.0
+/GSCMasterGuide.API/obj
+/GSCMasterGuide.Blazor/obj
+/GSCMasterGuide.Domain/bin/Debug/net6.0
+/GSCMasterGuide.Domain/obj
+/GSCMasterGuide.Infrastructure/bin/Debug/net6.0
+/GSCMasterGuide.Infrastructure/obj
+/GSCMasterGuide.Shared/bin/Debug/net6.0
+/GSCMasterGuide.Shared/obj/Debug/net6.0
+/GSCMasterGuide.Shared/obj
+/GSCMasterGuide.Blazor/bin/Debug/net6.0

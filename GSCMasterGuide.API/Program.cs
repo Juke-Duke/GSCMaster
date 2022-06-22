@@ -1,11 +1,13 @@
 using System.Text;
 using System.Text.Json.Serialization;
+using GSCMasterGuide.Domain.Entities;
 using GSCMasterGuide.Domain.IRepositories;
 using GSCMasterGuide.Infrastructure.Data;
 using GSCMasterGuide.Infrastructure.Repositories;
 using GSCMasterGuide.Infrastructure.Seed.Seeding;
 using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 
@@ -24,6 +26,20 @@ builder.Services.AddScoped<IAuthenticationRepository, AuthenticationRepository>(
                 .AddScoped<IMoveRepository, MoveRepository>()
                 .AddScoped<IItemRepository, ItemRepository>()
                 .AddMediatR(typeof(Program).Assembly);
+
+var identityBuilder = builder.Services.AddIdentityCore<Trainer>(opt =>
+{
+    // TODO make this secure
+    opt.Password.RequireNonAlphanumeric = false;
+    opt.Password.RequireUppercase = false;
+    opt.Password.RequireLowercase = false;
+    opt.SignIn.RequireConfirmedEmail = false;
+    opt.Password.RequiredLength = 3;
+    opt.Password.RequiredUniqueChars = 0;
+})
+    .AddEntityFrameworkStores<GSCDbContext>();
+
+identityBuilder = new(identityBuilder.UserType, typeof(IdentityRole<uint>), identityBuilder.Services);
 
 builder.Services.AddAuthentication(options =>
 {
@@ -55,6 +71,8 @@ app.MapControllers();
 using (var scope = app.Services.CreateScope())
 {
     var dbContext = scope.ServiceProvider.GetRequiredService<GSCDbContext>();
+    var userManager = scope.ServiceProvider.GetRequiredService<UserManager<Trainer>>();
+    await UserSeed.Seed(userManager);
     PokemonSeed.Seed(dbContext);
     MoveSeed.Seed(dbContext);
     ItemSeed.Seed(dbContext);
