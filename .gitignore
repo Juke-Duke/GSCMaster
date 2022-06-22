@@ -3,6 +3,7 @@
 ################################################################################
 
 /.vs
+/.vscode
 /GSCMasterGuide.API/bin/Debug/net6.0
 /GSCMasterGuide.API/obj
 /GSCMasterGuide.Blazor/obj
