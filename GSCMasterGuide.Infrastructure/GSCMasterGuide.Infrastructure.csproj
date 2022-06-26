@@ -18,8 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GSCMasterGuide.Domain\GSCMasterGuide.Domain.csproj" />
-    <ProjectReference Include="..\GSCMasterGuide.Shared\GSCMasterGuide.Shared.csproj" />
+    <ProjectReference Include="..\GSCMasterGuide.Core\GSCMasterGuide.Core.csproj" />
   </ItemGroup>
 
 </Project>

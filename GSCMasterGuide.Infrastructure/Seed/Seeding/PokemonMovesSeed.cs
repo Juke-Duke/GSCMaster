@@ -1,16 +1,14 @@
-using GSCMasterGuide.Infrastructure.Data;
-using GSCMasterGuide.Domain.Entities;
+using GSCMasterGuide.Core.Entities;
+using GSCMasterGuide.Infrastructure.Database;
 
-namespace GSCMasterGuide.Infrastructure.Seed.Seeding
+namespace GSCMasterGuide.Infrastructure.Seed.Seeding;
+public class PokemonMovesSeed
 {
-    public class PokemonMovesSeed
+    public static void Seed(GSCDbContext context)
     {
-        public static void Seed(GSCDbContext context)
-        {
-            if (context.PokemonMoves.Any())
-                return;
+        if (context.PokemonMoves.Any())
+            return;
 
-            context.SaveChanges();
-        }
+        context.SaveChanges();
     }
 }

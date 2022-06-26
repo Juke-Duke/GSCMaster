@@ -1,30 +1,28 @@
-using GSCMasterGuide.Infrastructure.Data;
-using GSCMasterGuide.Domain.Entities;
+using GSCMasterGuide.Core.Entities;
+using GSCMasterGuide.Infrastructure.Database;
 
-namespace GSCMasterGuide.Infrastructure.Seed.Seeding
+namespace GSCMasterGuide.Infrastructure.Seed.Seeding;
+public class ItemSeed
 {
-    public class ItemSeed
+    public static void Seed(GSCDbContext context)
     {
-        public static void Seed(GSCDbContext context)
+        if (context.Items.Any())
+            return;
+
+        var lines = File.ReadAllLines("..\\GSCMasterGuide.Infrastructure\\Seed\\SeedData\\ItemSeedData.tsv");
+        lines = lines.Skip(1).ToArray();
+
+        foreach (var line in lines)
         {
-            if (context.Items.Any())
-                return;
+            var values = line.Split('\t');
 
-            var lines = File.ReadAllLines("..\\GSCMasterGuide.Infrastructure\\Seed\\SeedData\\ItemSeedData.tsv");
-            lines = lines.Skip(1).ToArray();
-
-            foreach (var line in lines)
+            context.Items.Add(new Item
             {
-                var values = line.Split('\t');
-
-                context.Items.Add(new Item
-                {
-                    Name = values[0],
-                    Description = values[1],
-                    IsConsumable = bool.Parse(values[2])
-                });
-            }
-            context.SaveChanges();
+                Name = values[0],
+                Description = values[1],
+                IsConsumable = bool.Parse(values[2])
+            });
         }
+        context.SaveChanges();
     }
 }

@@ -1,10 +1,9 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <UserSecretsId>5744fd48-5ddb-4f02-9b2f-202c5e5c8d95</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -18,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GSCMasterGuide.Domain\GSCMasterGuide.Domain.csproj" />
+    <ProjectReference Include="..\GSCMasterGuide.Core\GSCMasterGuide.Core.csproj" />
     <ProjectReference Include="..\GSCMasterGuide.Infrastructure\GSCMasterGuide.Infrastructure.csproj" />
     <ProjectReference Include="..\GSCMasterGuide.Shared\GSCMasterGuide.Shared.csproj" />
   </ItemGroup>
