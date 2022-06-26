@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Identity;
 
 namespace GSCMasterGuide.Domain.Entities
 {
-    public class Trainer : IdentityUser<uint> // specify the data type for the Id property
+    public class Trainer : IdentityUser<uint>
     {
         // TODO remove - identityuser has passwordhash
         public string Password { get; set; } = null!;

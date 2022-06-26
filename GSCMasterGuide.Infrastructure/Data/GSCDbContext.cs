@@ -5,9 +5,9 @@ using Microsoft.AspNetCore.Identity;
 
 namespace GSCMasterGuide.Infrastructure.Data
 {
-    public class GSCDbContext : IdentityDbContext<Trainer, IdentityRole<uint>, uint> // Specify the type of user and data type for Ids
+    public class GSCDbContext : IdentityDbContext<Trainer, IdentityRole<uint>, uint>
     {
-        public GSCDbContext(DbContextOptions<GSCDbContext> options) : base(options) { }
+        public GSCDbContext(DbContextOptions<GSCDbContext> options) : base(options) {}
 
         public DbSet<Pokemon> Pokemon => Set<Pokemon>();
 
