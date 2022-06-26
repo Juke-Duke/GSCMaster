@@ -1,9 +1,9 @@
-using GSCMasterGuide.Shared.Responses.Authentication;
+using GSCMasterGuide.Shared.Requests.Authentication;
 using MediatR;
 
-namespace GSCMasterGuide.Domain.Commands.Authentication
+namespace GSCMasterGuide.Core.Commands.Authentication
 {
-    public class RegisterCommand : IRequest<RegisterResponse>
+    public class RegisterCommand : IRequest<bool>
     {
         public string Email { get; set; }
         public string Username { get; set; }

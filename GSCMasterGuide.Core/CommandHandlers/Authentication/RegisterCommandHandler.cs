@@ -1,19 +1,24 @@
-using GSCMasterGuide.Domain.Commands.Authentication;
-using GSCMasterGuide.Domain.IRepositories;
+using GSCMasterGuide.Core.IRepositories;
+using GSCMasterGuide.Core.Commands.Authentication;
 using GSCMasterGuide.Shared.Requests.Authentication;
-using GSCMasterGuide.Shared.Responses.Authentication;
 using MediatR;
 
-namespace GSCMasterGuide.Domain.CommandHandlers.Authentication
+namespace GSCMasterGuide.Core.CommandHandlers.Authentication
 {
-    public class RegisterCommandHandler : IRequestHandler<RegisterCommand, RegisterResponse>
+    public class RegisterCommandHandler : IRequestHandler<RegisterCommand, bool>
     {
         private readonly IAuthenticationRepository _authenticationRepository;
 
         public RegisterCommandHandler(IAuthenticationRepository authenticationRepository)
             => _authenticationRepository = authenticationRepository;
 
-        public async Task<RegisterResponse> Handle(RegisterCommand request, CancellationToken cancellationToken)
-            => await _authenticationRepository.Register(new RegisterRequest(request.Email, request.Username, request.Password, request.ConfirmPassword), cancellationToken);
+        public async Task<bool> Handle(RegisterCommand request, CancellationToken cancellationToken)
+            => await _authenticationRepository.Register(new RegisterRequest
+            {
+                Email = request.Email,
+                Username = request.Username,
+                Password = request.Password,
+                ConfirmPassword = request.ConfirmPassword
+            }, cancellationToken);
     }
 }

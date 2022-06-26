@@ -1,12 +1,9 @@
 using GSCMasterGuide.Shared.Requests.Authentication;
-using GSCMasterGuide.Shared.Responses.Authentication;
 
-namespace GSCMasterGuide.Domain.IRepositories
+namespace GSCMasterGuide.Core.IRepositories;
+public interface IAuthenticationRepository
 {
-    public interface IAuthenticationRepository
-    {
-        Task<RegisterResponse> Register(RegisterRequest request, CancellationToken cancellationToken);
+    Task<bool> Register(RegisterRequest request, CancellationToken cancellationToken);
 
-        Task<LoginResponse> Login(LoginRequest request, CancellationToken cancellationToken);
-    }
+    // Task Login(LoginRequest request, CancellationToken cancellationToken);
 }

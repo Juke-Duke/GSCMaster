@@ -86,3 +86,15 @@
 //         }
 //     }
 // }
+
+using GSCMasterGuide.Core.IRepositories;
+using GSCMasterGuide.Shared.Requests.Authentication;
+
+namespace GSCMasterGuide.Infrastructure.Repositories;
+public class AuthenticationRepository : IAuthenticationRepository
+{
+    public Task<bool> Register(RegisterRequest request, CancellationToken cancellationToken)
+    {
+        return Task.FromResult(true);
+    }
+}
