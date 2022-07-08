@@ -2,13 +2,11 @@
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSCMasterGuide.API", "GSCMasterGuide.API\GSCMasterGuide.API.csproj", "{9426534F-D876-45B0-B94D-E3B90A870259}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSCMaster.API", "GSCMaster.API\GSCMaster.API.csproj", "{9426534F-D876-45B0-B94D-E3B90A870259}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSCMasterGuide.Blazor", "GSCMasterGuide.Blazor\GSCMasterGuide.Blazor.csproj", "{147485F5-79FE-4DEF-B319-56799C06B972}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSCMaster.Core", "GSCMaster.Core\GSCMaster.Core.csproj", "{2DE9763F-FEC0-477E-A37E-3E5F62EE5A14}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSCMasterGuide.Core", "GSCMasterGuide.Core\GSCMasterGuide.Core.csproj", "{2DE9763F-FEC0-477E-A37E-3E5F62EE5A14}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSCMasterGuide.Infrastructure", "GSCMasterGuide.Infrastructure\GSCMasterGuide.Infrastructure.csproj", "{55A6DCC8-B8D9-4EB5-B53A-813BBABF45F0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSCMaster.Infrastructure", "GSCMaster.Infrastructure\GSCMaster.Infrastructure.csproj", "{55A6DCC8-B8D9-4EB5-B53A-813BBABF45F0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
