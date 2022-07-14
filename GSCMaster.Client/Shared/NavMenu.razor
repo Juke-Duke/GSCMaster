@@ -1,5 +1,18 @@
-﻿<MudNavMenu>
-    <MudNavLink Href="" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Home">Home</MudNavLink>
-    <MudNavLink Href="counter" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Add">Counter</MudNavLink>
-    <MudNavLink Href="fetchdata" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.List">Fetch data</MudNavLink>
-</MudNavMenu>
+﻿<hr class="width-75">
+<div class="navbar-container width-75">
+    <Navlink Hyperlink="/" MarkupString="@((MarkupString)GSCMaster)"/>
+    <div class="navbar-options">
+        <Navlink Hyperlink="/" NavLinkText="Guide"/>
+        <Navlink Hyperlink="/" NavLinkText="Teams"/>
+        <div class="user-nav-container">
+            <img src="Images/ButtonBorder.png" width="160px">
+            <a class="nav-link user-nav-link">Register</a>
+        </div>
+    </div>
+</div>
+<hr class="width-75">
+
+@code
+{
+    private const string GSCMaster = "<span style=\"color: #F3C875\">G</span><span style=\"color: #747CA4\">S</span><span style=\"color: #9CCCD4\">C</span>Master";
+}
