@@ -1,4 +1,7 @@
-﻿@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
+﻿@font-face {
+    font-family: "GSCPixel";
+    src: url(Fonts/Pokemon_GB.woff) format("woff");
+}
 
 html, body {
     background: linear-gradient(167.03deg, #EBEDEB 0%, rgba(235, 237, 235, 0.6) 100%);
