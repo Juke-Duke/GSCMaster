@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "GSCPixel";
+    src: url(Fonts/Pokemon_GB.woff) format("woff");
+}
+
 .logo {
     display: flex;
     justify-content: center;
@@ -5,9 +10,27 @@
     margin-top: 64px;
 }
 
-.header {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+.header-content {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.silver {
+    width: 200px;
+    position: absolute;
+    right: 275px;
+    bottom: 75px;
+}
+
+.header-text {
+    width: 65%;
+    font-family: "GSCPixel";
+    font-size: 36px;
+    text-align: center;
+    line-height: 150%;
+    position: absolute;
+    top: 61%;
+    left: 51%;
+    transform: translate(-50%, -50%);
 }

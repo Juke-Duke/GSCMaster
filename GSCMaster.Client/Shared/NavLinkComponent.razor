@@ -2,13 +2,13 @@
     @onmouseover="@(() => ToggleSelector())"
     @onmouseout="@(() => ToggleSelector())">
     <img src="Images/Selector.png" class="selector @isHidden" width="10px">
-    <a href="@Hyperlink" class="nav-link">@NavLinkText @MarkupString</a>
+    <a href="@Hyperlink" class="nav-link">@NavLinkComponentText @MarkupString</a>
 </div>
 
 @code
 {
     [Parameter] public string Hyperlink { get; set; } = "";
-    [Parameter] public string NavLinkText { get; set; } = "";
+    [Parameter] public string NavLinkComponentText { get; set; } = "";
     [Parameter] public MarkupString MarkupString { get; set; } = new MarkupString();
     private bool isSelected = false;
     private string? isHidden = "hidden";
