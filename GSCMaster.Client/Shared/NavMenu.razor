@@ -1,7 +1,22 @@
-﻿<div class="navmenu">
-    <div class="navbar-container">
+﻿<header>
         <NavLinkComponent Hyperlink="/" MarkupString="@((MarkupString)GSCMaster)"/>
-        <div class="navbar-options">
+    <nav class="navmenu-container">
+        <ul>
+            <li><NavLinkComponent Hyperlink="/" NavLinkComponentText="Guide"/></li>
+            <li><NavLinkComponent Hyperlink="/Pokemon" NavLinkComponentText="Pokemon"/></li>
+            <li><NavLinkComponent Hyperlink="/" NavLinkComponentText="Teams"/></li>
+        </ul>
+        @* <div class="user-nav-container">
+            <img src="Images/ButtonBorder.png" width="160px">
+            <a class="nav-link user-nav-link">Register</a>
+        </div> *@
+    </nav>
+</header>
+
+@* <div class="navmenu">
+    <div class="navmenu-container">
+        <NavLinkComponent Hyperlink="/" MarkupString="@((MarkupString)GSCMaster)"/>
+        <div class="navmenu-options">
             <NavLinkComponent Hyperlink="/" NavLinkComponentText="Guide"/>
             <NavLinkComponent Hyperlink="/" NavLinkComponentText="Teams"/>
             <div class="user-nav-container">
@@ -10,7 +25,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> *@
 
 @code
 {

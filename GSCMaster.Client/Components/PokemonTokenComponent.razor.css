@@ -1,0 +1,66 @@
+.pokemon-token {
+  width: 225px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  box-shadow: 0px 8px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.pokemon-and-tier {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.pokemon-tier {
+  font-family: "Quadrabet";
+  font-size: 10px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.pokemon-image {
+  filter: drop-shadow(10px 0px 5px rgba(0, 0, 0, 0.25));
+  position: relative;
+  bottom: 48%;
+}
+
+.pokemon-id {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  bottom: 16%;
+}
+
+.national-number {
+  font-family: "GSCPixel";
+}
+
+.pokemon-name {
+  text-decoration: none;
+  font-family: "Quadrabet";
+  color: black;
+  text-transform: uppercase;
+}
+
+.pokemon-type {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  bottom: 8%;
+}
+
+.type-icon {
+  width: 36px;
+  height: 36px;
+}

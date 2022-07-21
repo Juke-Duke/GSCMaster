@@ -1,0 +1,23 @@
+@page "/pokemon"
+
+@inject HttpClient Client
+
+<div class="pokemon-token-grid">
+    <h1 class="pokemon-page-header">POKEMON</h1>
+    @foreach (BasicPokemonDTO pokemon in Pokemon!)
+    {
+        <PokemonTokenComponent pokemon=@pokemon />
+    }
+</div>
+
+@code
+{
+    public BasicPokemonDTO[]? Pokemon { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        var options = new JsonSerializerOptions(JsonSerializerDefaults.Web);
+        options.Converters.Add(new JsonStringEnumConverter());
+        Pokemon = await Client.GetFromJsonAsync<BasicPokemonDTO[]>("/pokemon", options);
+    }
+}

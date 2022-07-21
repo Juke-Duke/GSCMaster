@@ -1,0 +1,14 @@
+.pokemon-page-header {
+  font-family: "Quadrabet";
+  text-align: center;
+  grid-column: 1/-1;
+}
+
+.pokemon-token-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 250px);
+  row-gap: 50px;
+  margin-top: 5%;
+  align-items: center;
+  justify-content: center;
+}

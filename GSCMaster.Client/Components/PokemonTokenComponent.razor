@@ -1,0 +1,19 @@
+<div class="pokemon-token">
+    <a href="@($"pokemon/{Pokemon!.Name}")">
+        <img src="@($"Images/PokemonSprites/{Pokemon.NationalNumber.ToString("000")}-{Pokemon.Name}.gif")" alt="@Pokemon.Name" class="pokemon-image"/>
+    </a>
+    <span class="pokemon-id">
+        <small class="national-number">@Pokemon.NationalNumber.ToString("000")</small>
+        <a href="@($"pokemon/{Pokemon.Name}")" class="pokemon-name">@Pokemon.Name</a>
+        <small class="pokemon-tier">@Pokemon.Tier</small>
+    </span>
+    <span class="pokemon-type">
+        <img src="@($"Images/PokemonTypes/{Pokemon.PrimaryType}.png")" alt="@Pokemon.PrimaryType" class="type-icon"/>
+        @if (Pokemon.SecondaryType != Core.Enums.Type.None) { <img src="@($"Images/PokemonTypes/{Pokemon.SecondaryType}.png")" alt="@Pokemon.SecondaryType" class="type-icon"/> }
+    </span>
+</div>
+
+@code
+{
+    [Parameter] public BasicPokemonDTO? Pokemon { get; set; }
+}

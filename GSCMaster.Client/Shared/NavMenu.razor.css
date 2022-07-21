@@ -1,39 +1,20 @@
-.navbar-container {
+header {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin: auto;
-  padding: 8px;
+  padding: 2rem 10%;
+  margin-bottom: 5rem;
 }
 
-.navbar-options {
+.nav-menu-container {
+  margin: auto;
+  height: 100vh;
+  position: fixed;
+}
+
+ul {
+  list-style: none;
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 48px;
-}
-
-.nav-link {
-  text-decoration: none;
-  font-family: "GSCPixel";
-  color: black;
-  font-size: 16px;
-  text-transform: uppercase;
-  text-align: center;
-  align-items: center;
-}
-
-.user-nav-container {
-  position: relative;
-  align-items: center;
-  text-align: center;
-}
-
-.user-nav-link {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  gap: 2rem;
 }

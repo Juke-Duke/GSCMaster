@@ -9,6 +9,9 @@ using GSCMaster.Core.IRepositories;
 using GSCMaster.Infrastructure.Database;
 using GSCMaster.Infrastructure.Repositories;
 using GSCMaster.Infrastructure.Seed.Seeding;
+using GSCMaster.Core.Queries.Pokemon;
+using GSCMaster.Core.QueryHandlers.Pokemon;
+
 using MediatR;
 
 namespace GSCMaster.API;
@@ -30,11 +33,11 @@ internal class Program
                         .AddScoped<IPokemonRepository, PokemonRepository>()
                         .AddScoped<IMoveRepository, MoveRepository>()
                         .AddScoped<IItemRepository, ItemRepository>()
-                        .AddMediatR(typeof(Program).Assembly);
+                        .AddMediatR(typeof(Program).Assembly, typeof(GetAllPokemonQuery).Assembly, typeof(GetAllPokemonHandler).Assembly);
 
         var identityBuilder = builder.Services.AddIdentityCore<Trainer>(options =>
         {
-            // TODO make this secure
+            // TODO make this secureimage.png
             options.Password.RequireNonAlphanumeric = false;
             options.Password.RequireUppercase = false;
             options.Password.RequireLowercase = false;
@@ -61,6 +64,17 @@ internal class Program
                 IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWTSettings:SecretKey"]))
             };
         });
+
+        builder.Services.AddCors(options =>
+        {
+            options.AddDefaultPolicy(
+                    policy =>
+                    {
+                        policy.WithOrigins("https://localhost:5000",
+                                            "https://localhost:5001");
+                    });
+        });
+
 
         var app = builder.Build();
 
