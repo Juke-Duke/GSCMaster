@@ -2,13 +2,14 @@
   font-family: "Quadrabet";
   text-align: center;
   grid-column: 1/-1;
+  margin-bottom: 30px;
 }
 
 .pokemon-token-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 250px);
-  row-gap: 50px;
-  margin-top: 5%;
+  grid-template-columns: repeat(auto-fit, 275px);
+  row-gap: 60px;
+  margin-bottom: 20%;
   align-items: center;
   justify-content: center;
 }
