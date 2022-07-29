@@ -1,15 +1,11 @@
 ﻿<header>
-    <NavLinkComponent Hyperlink="/" MarkupString="@((MarkupString)GSCMaster)"/>
-    <nav class="navmenu-container">
-        <ul>
-            <li><NavLinkComponent Hyperlink="/" NavLinkComponentText="Guide"/></li>
-            <li><NavLinkComponent Hyperlink="/Pokemon" NavLinkComponentText="Pokemon"/></li>
-            <li><NavLinkComponent Hyperlink="/" NavLinkComponentText="Teams"/></li>
-        </ul>
-        @* <div class="user-nav-container">
-            <img src="Images/ButtonBorder.png" width="160px">
-            <a class="nav-link user-nav-link">Register</a>
-        </div> *@
+    <nav>
+        <NavLinkComponent Hyperlink="/" MarkupString="@((MarkupString)GSCMaster)"/>
+        <span class="main-links">
+            <NavLinkComponent Hyperlink="/" NavLinkComponentText="Guide"/>
+            <NavLinkComponent Hyperlink="/pokemon" NavLinkComponentText="Pokemon"/>
+            <NavLinkComponent Hyperlink="/" NavLinkComponentText="Teams"/>
+        </span>
     </nav>
 </header>
 

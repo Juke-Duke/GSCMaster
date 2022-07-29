@@ -1,6 +1,6 @@
 .pokemon-token {
-  width: 225px;
-  height: 150px;
+  width: 260px;
+  height: 170px;
   display: flex;
   flex-direction: column;
   background: #ffffff;
@@ -14,45 +14,33 @@
 .pokemon-tier-corner {
   width: 50px;
   position: relative;
-  bottom: 50px;
-  right: 75px;
+  bottom: 70px;
+  right: 95px;
 }
 
 .pokemon-tier {
-  font-family: "Quadrabet";
   font-size: 10px;
   text-align: left;
-  text-transform: uppercase;
 }
 
 .pokemon-image-link {
   position: relative;
-  bottom: 18%;
+  bottom: 22%;
 }
 
 .pokemon-image {
   filter: drop-shadow(10px 0px 5px rgba(0, 0, 0, 0.25));
-  /* width: 65px; */
+  width: 100px;
 }
 
 .pokemon-id {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
   justify-content: center;
   align-items: center;
   position: relative;
-  bottom: 26%;
-}
-.national-number {
-  font-family: "GSCPixel";
-}
-
-.pokemon-name {
-  text-decoration: none;
-  font-family: "Quadrabet";
-  color: black;
-  text-transform: uppercase;
+  bottom: 28%;
 }
 
 .pokemon-type {
@@ -61,8 +49,6 @@
   gap: 16px;
   justify-content: center;
   align-items: center;
-  position: relative;
-  bottom: 16%;
 }
 
 .type-icon {

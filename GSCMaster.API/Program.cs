@@ -9,9 +9,6 @@ using GSCMaster.Core.IRepositories;
 using GSCMaster.Infrastructure.Database;
 using GSCMaster.Infrastructure.Repositories;
 using GSCMaster.Infrastructure.Seed.Seeding;
-using GSCMaster.Core.Queries.Pokemon;
-using GSCMaster.Core.QueryHandlers.Pokemon;
-
 using MediatR;
 
 namespace GSCMaster.API;
@@ -33,7 +30,7 @@ internal class Program
                         .AddScoped<IPokemonRepository, PokemonRepository>()
                         .AddScoped<IMoveRepository, MoveRepository>()
                         .AddScoped<IItemRepository, ItemRepository>()
-                        .AddMediatR(typeof(Program).Assembly, typeof(GetAllPokemonQuery).Assembly, typeof(GetAllPokemonHandler).Assembly);
+                        .AddMediatR(typeof(Program).Assembly, AppDomain.CurrentDomain.Load("GSCMaster.Core"));
 
         var identityBuilder = builder.Services.AddIdentityCore<Trainer>(options =>
         {
@@ -67,12 +64,10 @@ internal class Program
 
         builder.Services.AddCors(options =>
         {
-            options.AddDefaultPolicy(
-                    policy =>
-                    {
-                        policy.WithOrigins("https://localhost:5000",
-                                            "https://localhost:5001");
-                    });
+            options.AddDefaultPolicy(policy =>
+            {
+                policy.WithOrigins("https://localhost:5000", "https://localhost:5001");
+            });
         });
 
 

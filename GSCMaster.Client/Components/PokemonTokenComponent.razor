@@ -1,17 +1,19 @@
 <div class="pokemon-token">
-    <a href="@($"pokemon/{Pokemon!.Name}")" class="pokemon-image-link" >
-        <img src="@($"Images/PokemonSprites/{Pokemon.NationalNumber.ToString("000")}-{Pokemon.Name}.gif")" class="pokemon-image" />
-    </a>
+    <span class="pokemon-image-link">
+        <a href="@($"pokemon/{Pokemon!.Name.ToLower()}")"  >
+            <img src="@($"Images/PokemonSprites/{Pokemon.NationalNumber.ToString("000")}-{Pokemon.Name}.gif")" class="pokemon-image" />
+        </a>
+    </span>
     <span class="pokemon-tier-corner">
-        <small class="pokemon-tier">@Pokemon.Tier</small>
+        <small class="pokemon-tier font-quadrabet">@Pokemon.Tier</small>
     </span>
     <span class="pokemon-id">
-        <small class="national-number">@Pokemon.NationalNumber.ToString("000")</small>
-        <a href="@($"pokemon/{Pokemon.Name}")" class="pokemon-name">@Pokemon.Name</a>
-    </span>
-    <span class="pokemon-type">
-        <img src="@($"Images/PokemonTypes/{Pokemon.PrimaryType}.png")" alt="@Pokemon.PrimaryType" class="type-icon"/>
-        @if (Pokemon.SecondaryType != Core.Enums.Type.None) { <img src="@($"Images/PokemonTypes/{Pokemon.SecondaryType}.png")" alt="@Pokemon.SecondaryType" class="type-icon"/> }
+        <small class="font-gscpixel">@Pokemon.NationalNumber.ToString("000")</small>
+        <a href="@($"pokemon/{Pokemon.Name.ToLower()}")" class="font-quadrabet">@Pokemon.Name</a>
+        <span class="pokemon-type">
+            <img src="@($"Images/PokemonTypes/{Pokemon.PrimaryType}.png")" alt="@Pokemon.PrimaryType" class="type-icon"/>
+            @if (Pokemon.SecondaryType != Core.Enums.Type.None) { <img src="@($"Images/PokemonTypes/{Pokemon.SecondaryType}.png")" alt="@Pokemon.SecondaryType" class="type-icon"/> }
+        </span>
     </span>
 </div>
 

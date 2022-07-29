@@ -1,0 +1,26 @@
+.base-stats-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.base-stat {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.base-stat-bar {
+  width: 800px;
+  border-radius: 5px;
+}
+
+.base-stat-value {
+  height: 5px;
+  display: flex;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+}
