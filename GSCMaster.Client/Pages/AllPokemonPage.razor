@@ -9,7 +9,7 @@
     </span>
     @foreach (BasicPokemonDTO pokemon in Pokemon!)
     {
-        if (string.IsNullOrEmpty(PokemonNameInput) || pokemon.Name.ToLower().Contains(PokemonNameInput.ToLower()))
+        @if (string.IsNullOrEmpty(PokemonNameInput) || pokemon.Name.ToLower().Contains(PokemonNameInput.ToLower()))
         {
             <PokemonTokenComponent Pokemon=@pokemon />
         }

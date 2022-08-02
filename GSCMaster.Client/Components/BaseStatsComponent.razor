@@ -1,26 +1,15 @@
 <div class="base-stats-container">
-    <span class="base-stat">
-        <img src="Images/BaseStats/HPStat.png" class="base-stat-bar" />
-        <span class="base-stat-value font-gscpixel">100</span>
-    </span>
-    <span>
-        <img src="Images/BaseStats/ATKStat.png" class="base-stat-bar" />
-        <span></span>
-    </span>
-    <span>
-        <img src="Images/BaseStats/DEFStat.png" class="base-stat-bar" />
-        <span></span>
-    </span>
-    <span>
-        <img src="Images/BaseStats/SPAStat.png" class="base-stat-bar" />
-        <span></span>
-    </span>
-    <span>
-        <img src="Images/BaseStats/SPDStat.png" class="base-stat-bar" />
-        <span></span>
-    </span>
-    <span>
-        <img src="Images/BaseStats/SPEStat.png" class="base-stat-bar" />
-        <span></span>
-    </span>
+    <div class="base-stats-title font-gscpixel">Base Stats</div>
+    <StatComponent StatName="HP"  StatValue=@Pokemon!.HP       />
+    <StatComponent StatName="ATK" StatValue=@Pokemon.Attack    />
+    <StatComponent StatName="DEF" StatValue=@Pokemon.Defense   />
+    <StatComponent StatName="SPA" StatValue=@Pokemon.SpAttack  />
+    <StatComponent StatName="SPD" StatValue=@Pokemon.SpDefense />
+    <StatComponent StatName="SPE" StatValue=@Pokemon.Speed     />
+    <div class="base-stats-bst">
+        <span class="bst-title font-quadrabet">BST</span>
+        <small class="bst-value font-gscpixel">
+            @(Pokemon.HP + Pokemon.Attack + Pokemon.Defense + Pokemon.SpAttack + Pokemon.SpDefense + Pokemon.Speed)
+        </small>
+    </div>
 </div>

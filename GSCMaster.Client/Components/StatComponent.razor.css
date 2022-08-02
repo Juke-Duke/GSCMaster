@@ -1,0 +1,59 @@
+@keyframes StatBarAnimation {
+  0% {
+    width: 0%;
+    background-color: red;
+  }
+}
+
+.stat-info {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.stat-background {
+  display: flex;
+  flex-direction: row;
+  background-color: black;
+  border-radius: 5px;
+  width: 780px;
+  height: 50px;
+}
+
+.stat-name {
+  width: 150px;
+  display: flex;
+  color: #f0d078;
+  font-size: 36px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-left: 10px;
+}
+
+.stat-foreground {
+  background-color: #f8f8f8;
+  width: 600px;
+  height: 40px;
+}
+
+.stat-bar {
+  height: 60%;
+  border-radius: 0 5px 5px 0;
+  margin-top: 10px;
+  animation-name: StatBarAnimation;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.stat-value {
+  display: flex;
+  color: white;
+  font-size: 24px;
+  background-color: black;
+  border-radius: 5px;
+  width: 100px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+}

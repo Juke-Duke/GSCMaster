@@ -2,8 +2,13 @@
 
 @inject HttpClient Client
 
-<section>
-    <img src="@($"Images/PokemonSprites/{Pokemon!.NationalNumber.ToString("000")}-{Pokemon.Name}.gif")" />
+<section class="pokemon-full-token">
+    <div class="pokemon-info">
+        <img src="@($"Images/PokemonSprites/{Pokemon!.NationalNumber.ToString("000")}-{Pokemon.Name}.gif")" class="pokemon-image" />
+        <small class="national-number font-gscpixel">@Pokemon.NationalNumber.ToString("000")</small>
+        <span class="pokemon-name font-quadrabet">@Pokemon.Name</span>
+    </div>
+    <BaseStatsComponent Pokemon=@Pokemon />
 </section>
 
 @code
