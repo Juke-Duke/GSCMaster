@@ -1,0 +1,33 @@
+﻿@inherits LayoutComponentBase
+
+<MudThemeProvider DefaultScrollbar="true" Theme="GSCMasterTheme" />
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+<MudLayout>
+    <MudAppBar Elevation=0 Color="Color.Transparent" Fixed=false>
+        <MudLink Href=/ >
+            <MudImage Src="Images/Misc/GSCMasterLogo.png" Alt="GSCMasterLogo" Width=200 />
+        </MudLink>
+        <MudSpacer/>
+        <MudPaper MaxWidth=fit-content>
+            <MudLink Href=/guide Typo=Typo.button Underline=Underline.None Color=Color.Primary Style="font-family:GSCPixel;">
+                Guide
+            </MudLink>
+        </MudPaper>
+    </MudAppBar>
+    <MudMainContent>
+        @Body
+    </MudMainContent>
+</MudLayout>
+
+@code
+{
+    MudTheme GSCMasterTheme = new MudTheme()
+    {
+        Palette = new Palette()
+        {
+            Primary = Colors.Red.Default,
+        }
+    };
+}

@@ -1,0 +1,24 @@
+.nav-link-option {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
+}
+
+.selector {
+  width: 10px;
+  padding-bottom: 3px;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.nav-link {
+  font-family: "GSCPixel";
+  color: black;
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+}

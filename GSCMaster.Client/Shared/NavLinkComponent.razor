@@ -1,0 +1,21 @@
+<span class="nav-link-option">
+    <img src="Images/Misc/Selector.png" class="selector @isHidden">
+    <a href="@Hyperlink" class="nav-link" @onmouseover="@(() => ToggleSelector())" @onmouseout="@(() => ToggleSelector())">
+        @NavLinkComponentText @MarkupString
+    </a>
+</span>
+
+@code
+{
+    [Parameter] public string Hyperlink { get; set; } = "";
+    [Parameter] public string NavLinkComponentText { get; set; } = "";
+    [Parameter] public MarkupString MarkupString { get; set; } = new MarkupString();
+    private bool isSelected = false;
+    private string? isHidden = "hidden";
+
+    private void ToggleSelector()
+    {
+        isSelected = !isSelected;
+        isHidden = isSelected ? null : "hidden";
+    }
+}

@@ -1,0 +1,13 @@
+﻿<nav>
+    <NavLinkComponent Hyperlink="/" MarkupString="@((MarkupString)GSCMaster)"/>
+    <div class="main-links">
+        <NavLinkComponent Hyperlink="/" NavLinkComponentText="Guide"/>
+        <NavLinkComponent Hyperlink="/pokemon" NavLinkComponentText="Pokemon"/>
+        <NavLinkComponent Hyperlink="/" NavLinkComponentText="Teams"/>
+    </div>
+</nav>
+
+@code
+{
+    private const string GSCMaster = "<span style=\"color: #F3C875\">G</span><span style=\"color: #747CA4\">S</span><span style=\"color: #9CCCD4\">C</span>Master";
+}

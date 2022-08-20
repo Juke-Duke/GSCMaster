@@ -1,0 +1,13 @@
+.footer-container {
+  height: 125px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(276.2deg, #393939 4.9%, #393939 95.1%);
+  padding-inline: 3rem;
+}
+
+.copyright {
+  color: white;
+}

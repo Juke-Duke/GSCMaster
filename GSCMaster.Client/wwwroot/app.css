@@ -1,0 +1,47 @@
+﻿@font-face {
+  font-family: "GSCPixel";
+  src: url(Fonts/GSCPixel.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Quadrabet";
+  src: url(Fonts/Quadrabet.ttf) format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.mud-toolbar {
+  height: fit-content !important;
+}
+
+body {
+  background: linear-gradient(
+    119.36deg,
+    #ebedeb 0%,
+    rgba(235, 237, 235, 0.6) 100%
+  );
+}
+
+footer {
+  margin-top: auto;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.font-gscpixel {
+  font-family: "GSCPixel";
+}
+
+.font-quadrabet {
+  text-decoration: none;
+  font-family: "Quadrabet";
+  color: black;
+  text-transform: uppercase;
+}
