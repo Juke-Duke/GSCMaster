@@ -8,7 +8,7 @@ using MongoDB.Driver;
 using Type = GSCMaster.Core.Entities.Type;
 
 namespace GSCMaster.Infrastructure.Database;
-public class GSCMasterDBContext : IDisposable
+public class GSCMasterDBContext
 {
     public IMongoCollection<Pokemon> Pokemon { get; set; }
 
@@ -39,10 +39,5 @@ public class GSCMasterDBContext : IDisposable
         BsonSerializer.RegisterSerializer(new EnumSerializer<Gender>(BsonType.String));
         BsonSerializer.RegisterSerializer(new EnumSerializer<Category>(BsonType.String));
         BsonSerializer.RegisterSerializer(new EnumSerializer<Tier>(BsonType.String));
-    }
-
-    public void Dispose()
-    {
-        return;
     }
 }
