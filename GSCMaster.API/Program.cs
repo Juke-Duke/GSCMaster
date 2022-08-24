@@ -14,11 +14,18 @@ var builder = WebApplication.CreateBuilder(args);
         .AddGraphQLServer()
         .AddMongoDbProjections()
         .AddQueryType<PokemonQueries>();
+
+    builder.Services.AddCors();
 }
 
 var app = builder.Build();
 {
     app.UseHttpsRedirection();
+
+    app.UseCors(builder => builder
+        .AllowAnyOrigin()
+        .AllowAnyHeader()
+        .AllowAnyMethod());
 
     app.MapGraphQL();
 
