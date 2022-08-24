@@ -5,7 +5,7 @@ using HotChocolate;
 namespace GSCMaster.Application.IRepositories;
 public interface IPokemonRepository
 {
-    Task<IReadOnlyCollection<Pokemon>> GetAllPokemon();
+    Task<IReadOnlyCollection<Pokemon>> GetAllPokemonAsync();
 
-    Task<Pokemon?> GetPokemonByName(string name);
+    Task<Pokemon?> GetPokemonByNameAsync(string name);
 }
