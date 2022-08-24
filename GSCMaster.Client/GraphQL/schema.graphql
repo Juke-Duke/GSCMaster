@@ -1,0 +1,68 @@
+﻿schema {
+  query: PokemonQueries
+}
+
+type PokemonQueries {
+  allPokemon: [Pokemon!]!
+  pokemonByName(name: String!): Pokemon
+}
+
+type Pokemon {
+  nationalNumber: Int!
+  name: String!
+  tier: Tier!
+  primaryType: Type!
+  secondaryType: Type
+  hp: Int!
+  attack: Int!
+  defense: Int!
+  spAttack: Int!
+  spDefense: Int!
+  speed: Int!
+  preEvolution: Pokemon
+  evolution: [Pokemon!]!
+  moves: [Move!]!
+}
+
+enum Tier {
+  Uber
+  OU
+  UUBL
+  UU
+  NUBL
+  NU
+  NFE
+  LC
+}
+
+type Type {
+  name: String!
+  effectiveness: [TypeRelation!]!
+  resistances: [TypeRelation!]!
+  pokemon: [Pokemon!]!
+  moves: [Move!]!
+}
+
+type Move {
+  name: String!
+  type: Type!
+  category: Category!
+  power: Int!
+  accuracy: Int!
+  pp: Int!
+  priority: Int!
+  effect: String!
+  description: String!
+  pokemon: [Pokemon!]!
+}
+
+enum Category {
+  Physical
+  Special
+  Status
+}
+
+type TypeRelation {
+  name: String!
+  multiplier: Float!
+}
