@@ -10,12 +10,12 @@ public class ItemRepository : IItemRepository
     public ItemRepository(GSCMasterDBContext db)
         => _db = db;
 
-    public Task<IReadOnlyCollection<Item>> GetAllItems(CancellationToken cancellationToken)
+    public Task<IReadOnlyCollection<Item>> GetAllItemsAsync(CancellationToken cancellationToken)
     {
         throw new NotImplementedException();
     }
 
-    public Task<Item?> GetItem(string name, CancellationToken cancellationToken)
+    public Task<Item?> GetItemAsync(string name, CancellationToken cancellationToken)
     {
         throw new NotImplementedException();
     }

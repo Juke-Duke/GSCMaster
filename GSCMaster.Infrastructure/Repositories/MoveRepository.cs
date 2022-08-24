@@ -10,12 +10,12 @@ public class MoveRepository : IMoveRepository
     public MoveRepository(GSCMasterDBContext db)
         => _db = db;
 
-    public Task<IReadOnlyCollection<Move>> GetAllMoves(CancellationToken cancellationToken)
+    public Task<IReadOnlyCollection<Move>> GetAllMovesAsync(CancellationToken cancellationToken)
     {
         throw new NotImplementedException();
     }
 
-    public Task<Move?> GetMove(string name, CancellationToken cancellationToken)
+    public Task<Move?> GetMoveAsync(string name, CancellationToken cancellationToken)
     {
         throw new NotImplementedException();
     }

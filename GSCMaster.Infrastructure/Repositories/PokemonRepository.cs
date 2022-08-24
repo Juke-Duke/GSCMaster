@@ -1,8 +1,6 @@
 using GSCMaster.Application.IRepositories;
 using GSCMaster.Core.Entities;
 using GSCMaster.Infrastructure.Database;
-using HotChocolate;
-using HotChocolate.Data;
 using MongoDB.Driver;
 
 namespace GSCMaster.Infrastructure.Repositories;
@@ -13,9 +11,9 @@ public class PokemonRepository : IPokemonRepository
     public PokemonRepository(GSCMasterDBContext db)
         => _db = db;
 
-    public async Task<IReadOnlyCollection<Pokemon>> GetAllPokemon()
+    public async Task<IReadOnlyCollection<Pokemon>> GetAllPokemonAsync()
         => await _db.Pokemon.Find(FilterDefinition<Pokemon>.Empty).ToListAsync();
 
-    public async Task<Pokemon?> GetPokemonByName(string name)
+    public async Task<Pokemon?> GetPokemonByNameAsync(string name)
         => await _db.Pokemon.Find(p => p.Name == name).FirstOrDefaultAsync();
 }
