@@ -1,3 +1,5 @@
+using HotChocolate;
+
 namespace GSCMaster.Core.Enums;
 public enum Tier
 {

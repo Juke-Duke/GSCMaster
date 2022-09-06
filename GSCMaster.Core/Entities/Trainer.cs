@@ -1,5 +1,6 @@
 // using Microsoft.AspNetCore.Identity;
 
+using HotChocolate;
 using MongoDB.Bson;
 
 namespace GSCMaster.Core.Entities;

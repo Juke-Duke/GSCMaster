@@ -1,5 +1,4 @@
-using MongoDB.Bson;
-using MongoDB.Bson.Serialization.Attributes;
+using HotChocolate;
 
 namespace GSCMaster.Core.Enums;
 

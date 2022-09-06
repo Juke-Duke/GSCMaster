@@ -1,3 +1,4 @@
+using HotChocolate;
 using MongoDB.Bson;
 
 namespace GSCMaster.Core.Entities;
