@@ -20,13 +20,13 @@ public class TeamMember
 
     public Item? Item { get; set; } = null;
 
-    public Move MoveSlot1 { get; set; } = null!;
+    public Move MoveSlot1 { get; set; } = default!;
 
-    public Move? MoveSlot2 { get; set; } = null;
+    public Move? MoveSlot2 { get; set; } = default;
 
-    public Move? MoveSlot3 { get; set; } = null;
+    public Move? MoveSlot3 { get; set; } = default;
 
-    public Move? MoveSlot4 { get; set; } = null;
+    public Move? MoveSlot4 { get; set; } = default;
 
     public int HPEV { get; set; } = 252;
 

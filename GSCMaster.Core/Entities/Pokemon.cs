@@ -10,11 +10,11 @@ public class Pokemon
 
     public int NationalNumber { get; init; }
 
-    public string Name { get; set; } = null!;
+    public string Name { get; set; } = default!;
 
     public Tier Tier { get; set; } = Tier.OU;
 
-    public Type PrimaryType { get; set; } = null!;
+    public Type PrimaryType { get; set; } = default!;
 
     public Type? SecondaryType { get; set; }
 
@@ -31,7 +31,7 @@ public class Pokemon
 
     public int Speed { get; set; } = 0;
 
-    public Pokemon? PreEvolution { get; set; } = null;
+    public Pokemon? PreEvolution { get; set; } = default!;
 
     public ICollection<Pokemon> Evolution { get; set; } = new List<Pokemon>();
 

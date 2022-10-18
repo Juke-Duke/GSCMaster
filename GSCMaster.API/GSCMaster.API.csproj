@@ -14,7 +14,6 @@
   <ItemGroup>
     <ProjectReference Include="..\GSCMaster.Application\GSCMaster.Application.csproj" />
     <ProjectReference Include="..\GSCMaster.Infrastructure\GSCMaster.Infrastructure.csproj" />
-    <ProjectReference Include="..\GSCMaster.Contracts\GSCMaster.Contracts.csproj" />
   </ItemGroup>
 
 </Project>

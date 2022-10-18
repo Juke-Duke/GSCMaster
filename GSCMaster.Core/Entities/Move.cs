@@ -8,9 +8,9 @@ public class Move
     [GraphQLIgnore]
     public ObjectId Id { get; init; }
 
-    public string Name { get; set; } = null!;
+    public string Name { get; set; } = "";
 
-    public Type Type { get; set; } = null!;
+    public Type Type { get; set; } = default!;
 
     public Category Category { get; set; }
 

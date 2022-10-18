@@ -7,7 +7,7 @@ public class Type
     [GraphQLIgnore]
     public ObjectId Id { get; set; }
 
-    public string Name { get; set; } = null!;
+    public string Name { get; set; } = "";
 
     public ICollection<TypeRelation> Effectiveness { get; set; } = new List<TypeRelation>();
 

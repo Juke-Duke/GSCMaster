@@ -7,7 +7,7 @@ public class TypeRelation
     [GraphQLIgnore]
     public ObjectId Type { get; set; }
 
-    public string Name { get; set; } = null!;
+    public string Name { get; set; } = "";
 
-    public float Multiplier { get; set; }
+    public float Multiplier { get; set; } = 1f;
 }
