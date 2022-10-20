@@ -3,7 +3,7 @@ using HotChocolate;
 using MongoDB.Bson;
 
 namespace GSCMaster.Core.Entities;
-public class Move
+public sealed class Move
 {
     [GraphQLIgnore]
     public ObjectId Id { get; init; }

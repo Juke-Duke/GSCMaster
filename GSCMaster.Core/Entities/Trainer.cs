@@ -4,7 +4,7 @@ using HotChocolate;
 using MongoDB.Bson;
 
 namespace GSCMaster.Core.Entities;
-public class Trainer
+public sealed class Trainer
 // : IdentityUser
 {
     [GraphQLIgnore]

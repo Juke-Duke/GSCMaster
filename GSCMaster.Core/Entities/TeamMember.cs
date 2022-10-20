@@ -3,7 +3,7 @@ using HotChocolate;
 using MongoDB.Bson;
 
 namespace GSCMaster.Core.Entities;
-public class TeamMember
+public sealed class TeamMember
 {
     [GraphQLIgnore]
     public ObjectId Id { get; init; }

@@ -3,7 +3,7 @@ using GSCMaster.Core.Entities;
 using GSCMaster.Infrastructure.Database;
 
 namespace GSCMaster.Infrastructure.Repositories;
-public class MoveRepository : IMoveRepository
+public sealed class MoveRepository : IMoveRepository
 {
     private readonly GSCMasterDBContext _db;
 

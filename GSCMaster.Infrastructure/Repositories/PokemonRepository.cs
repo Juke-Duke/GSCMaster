@@ -4,7 +4,7 @@ using GSCMaster.Infrastructure.Database;
 using MongoDB.Driver;
 
 namespace GSCMaster.Infrastructure.Repositories;
-public class PokemonRepository : IPokemonRepository
+public sealed class PokemonRepository : IPokemonRepository
 {
     private readonly GSCMasterDBContext _db;
 

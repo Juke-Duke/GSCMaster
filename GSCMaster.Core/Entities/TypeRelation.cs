@@ -2,7 +2,7 @@ using HotChocolate;
 using MongoDB.Bson;
 
 namespace GSCMaster.Core.Entities;
-public class TypeRelation
+public sealed class TypeRelation
 {
     [GraphQLIgnore]
     public ObjectId Type { get; set; }

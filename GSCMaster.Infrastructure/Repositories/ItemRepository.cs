@@ -3,7 +3,7 @@ using GSCMaster.Application.IRepositories;
 using GSCMaster.Infrastructure.Database;
 
 namespace GSCMaster.Infrastructure.Repositories;
-public class ItemRepository : IItemRepository
+public sealed class ItemRepository : IItemRepository
 {
     private readonly GSCMasterDBContext _db;
 

@@ -2,9 +2,9 @@ using GSCMaster.Application.IRepositories;
 using MediatR;
 
 namespace GSCMaster.Application.CQRS.Pokemon.Queries;
-public record GetAllPokemonQuery : IRequest<IReadOnlyCollection<Core.Entities.Pokemon>>;
+public sealed record GetAllPokemonQuery : IRequest<IReadOnlyCollection<Core.Entities.Pokemon>>;
 
-public class GetAllPokemonHandler : IRequestHandler<GetAllPokemonQuery, IReadOnlyCollection<Core.Entities.Pokemon>>
+public sealed class GetAllPokemonHandler : IRequestHandler<GetAllPokemonQuery, IReadOnlyCollection<Core.Entities.Pokemon>>
 {
     private readonly IPokemonRepository _pokemonRepository;
 
