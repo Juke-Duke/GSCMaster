@@ -12,7 +12,7 @@ public static partial class Seeder
         if (db.Pokemon.CountDocuments(new BsonDocument()) > 0)
             return;
 
-        var lines = File.ReadAllLines("..\\GSCMaster.Infrastructure\\Seeding\\SeedData\\PokemonSeedData.tsv");
+        var lines = File.ReadAllLines(@"..\GSCMaster.Infrastructure\Seeding\SeedData\PokemonSeedData.tsv");
         lines = lines.Skip(1).ToArray();
 
         foreach (var line in lines)

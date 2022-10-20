@@ -12,7 +12,7 @@ public static partial class Seeder
         if (db.Types.CountDocuments(new BsonDocument()) > 0)
             return;
 
-        var lines = File.ReadAllLines("..\\GSCMaster.Infrastructure\\Seeding\\SeedData\\TypeSeedData.tsv");
+        var lines = File.ReadAllLines(@"..\GSCMaster.Infrastructure\Seeding\\SeedData\TypeSeedData.tsv");
         lines = lines.Skip(1).ToArray();
 
         foreach (var line in lines)
@@ -29,7 +29,7 @@ public static partial class Seeder
 
         List<string[]> matchups = new List<string[]>();
 
-        lines = File.ReadAllLines("..\\GSCMaster.Infrastructure\\Seeding\\SeedData\\TypeSeedData.tsv");
+        lines = File.ReadAllLines(@"..\GSCMaster.Infrastructure\Seeding\SeedData\TypeSeedData.tsv");
         lines = lines.ToArray();
 
         foreach (var line in lines)
@@ -77,7 +77,7 @@ public static partial class Seeder
 
         var pokemon = db.Pokemon.Find(new BsonDocument()).ToList();
 
-        lines = File.ReadAllLines("..\\GSCMaster.Infrastructure\\Seeding\\SeedData\\PokemonSeedData.tsv");
+        lines = File.ReadAllLines(@"..\GSCMaster.Infrastructure\Seeding\SeedData\PokemonSeedData.tsv");
         lines = lines.Skip(1).ToArray();
 
         foreach (var line in lines)

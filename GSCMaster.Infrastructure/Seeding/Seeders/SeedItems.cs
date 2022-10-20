@@ -11,7 +11,7 @@ public static partial class Seeder
         if (db.Items.CountDocuments(new BsonDocument()) > 0)
             return;
 
-        var lines = File.ReadAllLines("..\\GSCMaster.Infrastructure\\Seeding\\SeedData\\ItemSeedData.tsv");
+        var lines = File.ReadAllLines(@"..\GSCMaster.Infrastructure\Seeding\SeedData\ItemSeedData.tsv");
         lines = lines.Skip(1).ToArray();
 
         foreach (var line in lines)

@@ -1,4 +1,3 @@
-using System.Reflection.PortableExecutable;
 using GSCMaster.API.GraphQL.Queries;
 using GSCMaster.Application;
 using GSCMaster.Infrastructure;
@@ -22,6 +21,8 @@ var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 {
     app.UseHttpsRedirection();
+
+    app.UseWebSockets();
 
     app.UseCors(builder => builder
         .AllowAnyOrigin()
