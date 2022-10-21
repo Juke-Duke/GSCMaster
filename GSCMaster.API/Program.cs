@@ -3,6 +3,7 @@ using GSCMaster.Application;
 using GSCMaster.Infrastructure;
 using GSCMaster.Infrastructure.Database;
 using GSCMaster.Infrastructure.Seeding;
+using MediatR;
 
 var builder = WebApplication.CreateBuilder(args);
 {
@@ -13,6 +14,7 @@ var builder = WebApplication.CreateBuilder(args);
     builder.Services
         .AddGraphQLServer()
         .AddMongoDbProjections()
+        .RegisterService<IMediator>()
         .AddQueryType<PokemonQueries>();
 
     builder.Services.AddCors();
