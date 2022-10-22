@@ -3,6 +3,7 @@ using GSCMaster.Application;
 using GSCMaster.Infrastructure;
 using GSCMaster.Infrastructure.Database;
 using GSCMaster.Infrastructure.Seeding;
+using HotChocolate.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 {
@@ -29,7 +30,10 @@ var app = builder.Build();
         .AllowAnyHeader()
         .AllowAnyMethod());
 
-    app.MapGraphQL();
+    app.MapGraphQL().WithOptions(new GraphQLServerOptions
+    {
+        EnableGetRequests = true
+    });
 
     var db = app.Services.GetRequiredService<GSCMasterDBContext>();
     {
