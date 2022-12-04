@@ -1,9 +1,9 @@
 using GSCMaster.Core.Entities;
 
-namespace GSCMaster.Application.IRepositories;
+namespace GSCMaster.Application.Repositories;
 public interface IItemRepository
 {
     Task<IReadOnlyCollection<Item>> GetAllItemsAsync(CancellationToken cancellationToken);
 
-    Task<Item?> GetItemAsync(string name, CancellationToken cancellationToken);
+    Task<Item?> GetItemByNameAsync(string name, CancellationToken cancellationToken);
 }

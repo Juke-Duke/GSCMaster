@@ -1,22 +1,19 @@
-using GSCMaster.Application.IRepositories;
+using GSCMaster.Application.Repositories;
 using GSCMaster.Core.Entities;
 using GSCMaster.Infrastructure.Database;
+using MongoDB.Driver;
 
 namespace GSCMaster.Infrastructure.Repositories;
 public sealed class MoveRepository : IMoveRepository
 {
-    private readonly GSCMasterDBContext _db;
+    private readonly GSCMasterDbContext _db;
 
-    public MoveRepository(GSCMasterDBContext db)
+    public MoveRepository(GSCMasterDbContext db)
         => _db = db;
 
-    public Task<IReadOnlyCollection<Move>> GetAllMovesAsync(CancellationToken cancellationToken)
-    {
-        throw new NotImplementedException();
-    }
+    public async Task<IReadOnlyCollection<Move>> GetAllMovesAsync(CancellationToken cancellationToken)
+        => await _db.Moves.Find(FilterDefinition<Move>.Empty).ToListAsync(cancellationToken);
 
-    public Task<Move?> GetMoveAsync(string name, CancellationToken cancellationToken)
-    {
-        throw new NotImplementedException();
-    }
+    public async Task<Move?> GetMoveByNameAsync(string name, CancellationToken cancellationToken)
+        => await _db.Moves.Find(m => m.Name.ToLower() == name.ToLower()).FirstOrDefaultAsync(cancellationToken);
 }

@@ -3,11 +3,13 @@ using GSCMaster.Core.Entities;
 using MediatR;
 
 namespace GSCMaster.API.GraphQL.Queries;
+
+[ExtendObjectType(OperationTypeNames.Query)]
 public sealed class PokemonQueries
 {
-    public async Task<IReadOnlyCollection<Pokemon>> GetAllPokemon([Service] IMediator mediator, CancellationToken cancellationToken)
+    public async Task<IReadOnlyCollection<Pokemon>> GetAllPokemon([Service] ISender mediator, CancellationToken cancellationToken)
         => await mediator.Send(new GetAllPokemonQuery(), cancellationToken);
 
-    public async Task<Pokemon?> GetPokemonByName([Service] IMediator mediator, string name, CancellationToken cancellationToken)
-        => await mediator.Send(new GetPokemonQuery(name), cancellationToken);
+    public async Task<Pokemon?> GetPokemonByName([Service] ISender mediator, string name, CancellationToken cancellationToken)
+        => await mediator.Send(new GetPokemonByNameQuery(name), cancellationToken);
 }

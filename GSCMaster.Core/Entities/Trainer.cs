@@ -1,18 +1,19 @@
-// using Microsoft.AspNetCore.Identity;
-
 using HotChocolate;
 using MongoDB.Bson;
 
 namespace GSCMaster.Core.Entities;
-public sealed class Trainer
-// : IdentityUser
+public sealed record Trainer
 {
     [GraphQLIgnore]
     public ObjectId Id { get; set; }
-    // TODO remove - identityuser has passwordhash
-    public string Password { get; set; } = null!;
 
-    public DateTime CreatedAtDate { get; set; }
+    public required string Username { get; set; }
+
+    public required string Email { get; set; }
+
+    public required string Password { get; set; }
+
+    public required DateTime CreatedAt { get; set; }
 
     public ICollection<Team> Teams { get; set; } = new List<Team>();
 }

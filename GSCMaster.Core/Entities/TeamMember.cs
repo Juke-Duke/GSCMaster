@@ -3,16 +3,16 @@ using HotChocolate;
 using MongoDB.Bson;
 
 namespace GSCMaster.Core.Entities;
-public sealed class TeamMember
+public sealed record TeamMember
 {
     [GraphQLIgnore]
     public ObjectId Id { get; init; }
 
-    public string? Nickname { get; set; } = null;
+    public string? Nickname { get; set; }
 
-    public Pokemon Pokemon { get; set; } = null!;
+    public required Pokemon Pokemon { get; set; }
 
-    public Gender Gender { get; set; } = Gender.Genderless;
+    public Gender Gender { get; set; } = Gender.Random;
 
     public int Happiness { get; set; } = 255;
 
@@ -20,13 +20,13 @@ public sealed class TeamMember
 
     public Item? Item { get; set; } = null;
 
-    public Move MoveSlot1 { get; set; } = default!;
+    public required Move MoveSlot1 { get; set; }
 
-    public Move? MoveSlot2 { get; set; } = default;
+    public Move? MoveSlot2 { get; set; }
 
-    public Move? MoveSlot3 { get; set; } = default;
+    public Move? MoveSlot3 { get; set; }
 
-    public Move? MoveSlot4 { get; set; } = default;
+    public Move? MoveSlot4 { get; set; }
 
     public int HPEV { get; set; } = 252;
 
@@ -40,15 +40,15 @@ public sealed class TeamMember
 
     public int SpeedEV { get; set; } = 252;
 
-    public int HPIV { get; set; } = 30;
+    public int HPDV { get; set; } = 15;
 
-    public int AttackIV { get; set; } = 30;
+    public int AttackDV { get; set; } = 15;
 
-    public int DefenseIV { get; set; } = 30;
+    public int DefenseDV { get; set; } = 15;
 
-    public int SpAttackIV { get; set; } = 30;
+    public int SpAttackDV { get; set; } = 15;
 
-    public int SpDefenseIV { get; set; } = 30;
+    public int SpDefenseDV { get; set; } = 15;
 
-    public int SpeedIV { get; set; } = 30;
+    public int SpeedDV { get; set; } = 15;
 }

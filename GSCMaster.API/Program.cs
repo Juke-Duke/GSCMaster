@@ -1,3 +1,4 @@
+using GSCMaster.API.GraphQL.Mutations;
 using GSCMaster.API.GraphQL.Queries;
 using GSCMaster.Application;
 using GSCMaster.Infrastructure;
@@ -13,8 +14,18 @@ var builder = WebApplication.CreateBuilder(args);
 
     builder.Services
         .AddGraphQLServer()
+        .AddAuthorization()
+        .AddObjectIdConverters()
         .AddMongoDbProjections()
-        .AddQueryType<PokemonQueries>();
+
+        .AddQueryType()
+        .AddType<PokemonQueries>()
+        .AddType<ItemQueries>()
+
+        .AddMutationType()
+        .AddType<AuthenticationMutations>()
+
+        .InitializeOnStartup();
 
     builder.Services.AddCors();
 }
@@ -24,6 +35,8 @@ var app = builder.Build();
     app.UseHttpsRedirection();
 
     app.UseWebSockets();
+
+    app.UseAuthentication();
 
     app.UseCors(builder => builder
         .AllowAnyOrigin()
@@ -35,8 +48,10 @@ var app = builder.Build();
         EnableGetRequests = true
     });
 
-    var db = app.Services.GetRequiredService<GSCMasterDBContext>();
+    var db = app.Services.GetRequiredService<GSCMasterDbContext>();
     {
+        Seeder.SeedItems(db);
+        Seeder.SeedTypes(db);
         Seeder.SeedPokemon(db);
     }
 

@@ -8,7 +8,7 @@ using MongoDB.Driver;
 using Type = GSCMaster.Core.Entities.Type;
 
 namespace GSCMaster.Infrastructure.Database;
-public class GSCMasterDBContext
+public class GSCMasterDbContext
 {
     public IMongoCollection<Pokemon> Pokemon { get; set; }
 
@@ -24,7 +24,7 @@ public class GSCMasterDBContext
 
     public IMongoCollection<Trainer> Trainers { get; set; }
 
-    public GSCMasterDBContext(IConfiguration config)
+    public GSCMasterDbContext(IConfiguration config)
     {
         var client = new MongoClient(config.GetConnectionString("MongoDB"));
         var database = client.GetDatabase("GSCMasterDB");

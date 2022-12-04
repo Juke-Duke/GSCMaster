@@ -6,7 +6,7 @@ using MongoDB.Driver;
 namespace GSCMaster.Infrastructure.Seeding;
 public static partial class Seeder
 {
-    public static void SeedItems(GSCMasterDBContext db)
+    public static void SeedItems(GSCMasterDbContext db)
     {
         if (db.Items.CountDocuments(new BsonDocument()) > 0)
             return;

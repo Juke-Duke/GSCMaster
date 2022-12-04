@@ -1,4 +1,4 @@
-using GSCMaster.Application.IRepositories;
+using GSCMaster.Application.Repositories;
 using GSCMaster.Core.Entities;
 using GSCMaster.Infrastructure.Database;
 using MongoDB.Driver;
@@ -6,14 +6,16 @@ using MongoDB.Driver;
 namespace GSCMaster.Infrastructure.Repositories;
 public sealed class PokemonRepository : IPokemonRepository
 {
-    private readonly GSCMasterDBContext _db;
+    private readonly GSCMasterDbContext _db;
 
-    public PokemonRepository(GSCMasterDBContext db)
+    public PokemonRepository(GSCMasterDbContext db)
         => _db = db;
 
-    public async Task<IReadOnlyCollection<Pokemon>> GetAllPokemonAsync()
-        => await _db.Pokemon.Find(FilterDefinition<Pokemon>.Empty).ToListAsync();
+    public async Task<IReadOnlyCollection<Pokemon>> GetAllPokemonAsync(CancellationToken cancellationToken)
+        => await _db.Pokemon.Find(FilterDefinition<Pokemon>.Empty)
+                            .ToListAsync(cancellationToken);
 
-    public async Task<Pokemon?> GetPokemonByNameAsync(string name)
-        => await _db.Pokemon.Find(p => p.Name == name).FirstOrDefaultAsync();
+    public async Task<Pokemon?> GetPokemonByNameAsync(string name, CancellationToken cancellationToken)
+        => await _db.Pokemon.Find(pokemon => pokemon.Name.ToLower() == name.ToLower())
+                            .FirstOrDefaultAsync(cancellationToken);
 }

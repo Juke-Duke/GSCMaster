@@ -7,7 +7,7 @@ using MongoDB.Driver;
 namespace GSCMaster.Infrastructure.Seeding;
 public static partial class Seeder
 {
-    public static void SeedPokemon(GSCMasterDBContext db)
+    public static async void SeedPokemon(GSCMasterDbContext db)
     {
         if (db.Pokemon.CountDocuments(new BsonDocument()) > 0)
             return;
@@ -24,6 +24,8 @@ public static partial class Seeder
                 NationalNumber = int.Parse(values[0]),
                 Name = values[1],
                 Tier = (Tier)Enum.Parse(typeof(Tier), values[2]),
+                PrimaryType = await db.Types.FindAsync(type => type.Name == values[3]).Result.FirstOrDefaultAsync(),
+                SecondaryType = values[4] == "None" ? null : await db.Types.FindAsync(type => type.Name == values[4]).Result.FirstOrDefaultAsync(),
                 HP = int.Parse(values[6]),
                 Attack = int.Parse(values[7]),
                 Defense = int.Parse(values[8]),
@@ -31,24 +33,6 @@ public static partial class Seeder
                 SpDefense = int.Parse(values[10]),
                 Speed = int.Parse(values[11])
             });
-
-            Console.WriteLine($"{values[1]} added to database");
-        }
-
-        Seeder.SeedTypes(db);
-
-        foreach (var line in lines)
-        {
-            var values = line.Split('\t');
-
-            var filter = Builders<Pokemon>.Filter.Eq(p => p.Name, values[1]);
-
-            var update = Builders<Pokemon>.Update
-                .Set(p => p.PreEvolution, db.Pokemon
-                .Find(p => p.Name == values[5])
-                .FirstOrDefault());
-
-            db.Pokemon.UpdateOne(filter, update);
         }
     }
 }

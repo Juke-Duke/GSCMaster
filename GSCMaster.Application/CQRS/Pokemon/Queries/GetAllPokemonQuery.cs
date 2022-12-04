@@ -1,4 +1,5 @@
-using GSCMaster.Application.IRepositories;
+using FluentValidation;
+using GSCMaster.Application.Repositories;
 using MediatR;
 
 namespace GSCMaster.Application.CQRS.Pokemon.Queries;
@@ -12,5 +13,5 @@ public sealed class GetAllPokemonHandler : IRequestHandler<GetAllPokemonQuery, I
         => _pokemonRepository = pokemonRepository;
 
     public async Task<IReadOnlyCollection<Core.Entities.Pokemon>> Handle(GetAllPokemonQuery request, CancellationToken cancellationToken)
-        => await _pokemonRepository.GetAllPokemonAsync();
+        => await _pokemonRepository.GetAllPokemonAsync(cancellationToken);
 }

@@ -1,17 +1,21 @@
 using HotChocolate;
 using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
+using MongoDB.Bson.Serialization.Options;
 
 namespace GSCMaster.Core.Entities;
-public sealed class Type
+public sealed record Type
 {
     [GraphQLIgnore]
     public ObjectId Id { get; set; }
 
-    public string Name { get; set; } = "";
+    public required string Name { get; set; }
 
-    public ICollection<TypeRelation> Effectiveness { get; set; } = new List<TypeRelation>();
+    [BsonDictionaryOptions(DictionaryRepresentation.ArrayOfArrays)]
+    public Dictionary<ObjectId, float> Effectiveness { get; set; } = new();
 
-    public ICollection<TypeRelation> Resistances { get; set; } = new List<TypeRelation>();
+    [BsonDictionaryOptions(DictionaryRepresentation.ArrayOfArrays)]
+    public Dictionary<ObjectId, float> Resistances { get; set; } = new();
 
     public ICollection<Pokemon> Pokemon { get; set; } = new List<Pokemon>();
 
