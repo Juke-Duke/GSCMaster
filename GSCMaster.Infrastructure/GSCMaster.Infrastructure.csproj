@@ -7,15 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="HotChocolate.Data.MongoDb" Version="12.15.2" />
+    <PackageReference Include="HotChocolate.Data.MongoDb" Version="13.0.0-preview.88" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.0" />
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.25.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GSCMaster.Application\GSCMaster.Application.csproj" />
     <ProjectReference Include="..\GSCMaster.Core\GSCMaster.Core.csproj" />
+    <ProjectReference Include="..\GSCMaster.Application\GSCMaster.Application.csproj" />
   </ItemGroup>
 
 </Project>

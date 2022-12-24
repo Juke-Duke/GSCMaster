@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="HotChocolate.Data.MongoDb" Version="12.15.2" />
+    <PackageReference Include="HotChocolate.Data.MongoDb" Version="13.0.0-preview.88" />
     <PackageReference Include="MediatR" Version="11.1.0" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
     <PackageReference Include="Mapster" Version="7.3.0" />
@@ -18,7 +18,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\GSCMaster.Core\GSCMaster.Core.csproj" />
-    <ProjectReference Include="..\GSCMaster.Contracts\GSCMaster.Contracts.csproj" />
   </ItemGroup>
 
 </Project>

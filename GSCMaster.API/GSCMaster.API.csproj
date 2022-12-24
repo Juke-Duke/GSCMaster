@@ -7,8 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="HotChocolate.AspNetCore" Version="12.15.2" />
-    <PackageReference Include="HotChocolate.AspNetCore.Authorization" Version="12.15.2" />
+    <PackageReference Include="HotChocolate.AspNetCore" Version="13.0.0-preview.88" />
+    <PackageReference Include="HotChocolate.AspNetCore.Authorization" Version="13.0.0-preview.88" />
+    <PackageReference Include="HotChocolate.Execution" Version="13.0.0-preview.88" />
     <PackageReference Include="MediatR" Version="11.1.0" />
     <PackageReference Include="Mapster" Version="7.3.0" />
   </ItemGroup>

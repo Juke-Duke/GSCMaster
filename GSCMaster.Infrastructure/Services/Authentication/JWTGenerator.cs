@@ -1,11 +1,11 @@
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using GSCMaster.Application.Services;
-using GSCMaster.Application.Services.Authentication;
-using GSCMaster.Core.Entities;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+using GSCMaster.Application.Services;
+using GSCMaster.Application.Services.Authentication;
+using GSCMaster.Core.TrainerAggregate;
 
 namespace GSCMaster.Infrastructure.Services.Authenticaion;
 public class JWTGenerator : IJWTGenerator

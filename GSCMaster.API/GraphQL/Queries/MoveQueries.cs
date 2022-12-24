@@ -1,15 +1,20 @@
-using GSCMaster.Application.CQRS.Moves.Queries;
-using GSCMaster.Core.Entities;
+using GSCMaster.Application.Features.Resources.MoveDex;
+using GSCMaster.Core.MoveAggregate;
 using MediatR;
 
 namespace GSCMaster.API.GraphQL.Queries;
 
-[ExtendObjectType(OperationTypeNames.Query)]
-public sealed class MoveQueries
+[QueryType]
+public static class MoveQueries
 {
-    public async Task<IReadOnlyCollection<Move>> GetAllMoves([Service] ISender mediator, CancellationToken cancellationToken)
+    public static async Task<IReadOnlyCollection<Move>> GetAllMoves(
+        [Service] ISender mediator,
+        CancellationToken cancellationToken)
         => await mediator.Send(new GetAllMovesQuery(), cancellationToken);
 
-    public async Task<Move?> GetMoveByName([Service] ISender mediator, string name, CancellationToken cancellationToken)
+    public static async Task<Move?> GetMoveByName(
+        [Service] ISender mediator,
+        string name,
+        CancellationToken cancellationToken)
         => await mediator.Send(new GetMoveByNameQuery(name), cancellationToken);
 }

@@ -1,4 +1,4 @@
-using GSCMaster.Core.Entities;
+using GSCMaster.Core.TrainerAggregate;
 
 namespace GSCMaster.Application.Services.Authentication;
 public interface IJWTGenerator

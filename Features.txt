@@ -1,0 +1,31 @@
+- Archive
+    - Intro to GSC Meta (with links to the relevant threads)
+    - Show all pokemon info
+    - Show all moves info
+    - Show all items info
+
+- Team Builder
+    - Setup Mode
+        - Choose format
+        - Import teams from showdown
+        - Import teams from pokepast.es
+    - Build Mode
+        - Show most used sets for a pokemon
+        - Show most used teammates for a pokemon
+        - Advise some missing checks and counters
+        - Verify legitimacy of each team member
+    - Analysis Mode
+        - Check damage calculations on other pokemon
+        - Show type matchups
+        - Show spikes control
+        - Show speed control
+        - Show status control
+    - Finalize Mode
+        - Description on how to use team
+        - Port teams to showdown
+
+- Sharing
+    - Upload and show your teams
+    - Allow teams to be public or private
+    - Allow others to star or copy your teams
+    - Allow others to copy just specific sets

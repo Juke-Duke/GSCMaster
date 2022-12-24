@@ -1,9 +1,10 @@
-using GSCMaster.Application.Repositories;
+using GSCMaster.Application.Features.Authentication;
 using GSCMaster.Application.Services;
 using GSCMaster.Application.Services.Authentication;
-using GSCMaster.Contracts.Authentication.Requests;
-using GSCMaster.Contracts.Authentication.Response;
-using GSCMaster.Core.Entities;
+using GSCMaster.Application.Services.Repositories;
+using GSCMaster.Core.Common.Errors;
+using GSCMaster.Core.Common.Primitives;
+using GSCMaster.Core.TrainerAggregate;
 
 namespace GSCMaster.Infrastructure.Services.Authentication;
 public class AuthenticationService : IAuthenticationService
@@ -19,29 +20,30 @@ public class AuthenticationService : IAuthenticationService
         _dateTimeProvider = dateTimeProvider;
     }
 
-    public async Task<AuthenticationResponse> RegisterTrainerAsync(RegisterTrainerRequest request, CancellationToken cancellationToken)
+    public async Task<ErrorProne<AuthenticationResponse>> RegisterTrainerAsync(RegisterTrainerCommand request, CancellationToken cancellationToken)
     {
-        if (request.Password != request.ConfirmPassword)
-        {
-            throw new Exception("Passwords do not match");
-        }
+        var errors = new List<Error>();
 
-        if (await _trainerRepository.GetTrainerByEmailAsync(request.Email, cancellationToken) != null)
-        {
-            throw new ArgumentException("Email already exists");
-        }
+        if (await _trainerRepository.GetTrainerByEmailAsync(request.Email, cancellationToken) is not null)
+            errors.Add(AuthenticationErrors.EmailAlreadyExists);
+
+        if (request.Password != request.ConfirmPassword)
+            errors.Add(AuthenticationErrors.UnconfirmedPassword);
+
+        if (errors.Any())
+            return errors;
 
         var trainer = new Trainer
-        {
-            Username = request.Username,
-            Email = request.Email,
-            Password = request.Password,
-            CreatedAt = _dateTimeProvider.UtcNow
-        };
+        (
+            username: request.Username,
+            email: request.Email,
+            password: request.Password,
+            createdAt: _dateTimeProvider.UtcNow
+        );
 
         await _trainerRepository.AddTrainerAsync(trainer, cancellationToken);
 
-        return new
+        return new AuthenticationResponse
         (
             Id: trainer.Id,
             Username: trainer.Username,
@@ -50,19 +52,14 @@ public class AuthenticationService : IAuthenticationService
         );
     }
 
-    public async Task<AuthenticationResponse> LoginTrainerAsync(LoginTrainerRequest request, CancellationToken cancellationToken)
+    public async Task<ErrorProne<AuthenticationResponse>> LoginTrainerAsync(LoginTrainerCommand request, CancellationToken cancellationToken)
     {
-        if (await _trainerRepository.GetTrainerByEmailAsync(request.Email, cancellationToken) is not Trainer trainer)
-        {
-            throw new ArgumentException("Email does not exist");
-        }
+        var trainer = await _trainerRepository.GetTrainerByEmailAsync(request.Email, cancellationToken);
 
-        if (trainer.Password != request.Password)
-        {
-            throw new ArgumentException("Password is incorrect");
-        }
+        if (trainer is null || trainer.Password != request.Password)
+            return AuthenticationErrors.InvalidLogin;
 
-        return new
+        return new AuthenticationResponse
         (
             Id: trainer.Id,
             Username: trainer.Username,

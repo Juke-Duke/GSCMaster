@@ -1,24 +1,23 @@
-using GSCMaster.Application.CQRS.Authentication.Commands;
-using GSCMaster.Contracts.Authentication.Requests;
-using GSCMaster.Contracts.Authentication.Response;
+using GSCMaster.Application.Features.Authentication;
+using GSCMaster.Core.Common.Primitives;
 using MapsterMapper;
 using MediatR;
 
 namespace GSCMaster.API.GraphQL.Mutations;
 
-[ExtendObjectType(OperationTypeNames.Mutation)]
-public sealed class AuthenticationMutations
+[MutationType]
+public static class AuthenticationMutations
 {
-    public async Task<AuthenticationResponse> RegisterTrainer(
+    public static async Task<ErrorProne<AuthenticationResponse>> RegisterTrainer(
         [Service] ISender mediator, [Service] IMapper mapper,
-        RegisterTrainerRequest request,
+        RegisterTrainerCommand request,
         CancellationToken cancellationToken)
-        => await mediator.Send(mapper.Map<RegisterTrainerCommand>(request), cancellationToken);
+        => await mediator.Send(request, cancellationToken);
 
-    public async Task<AuthenticationResponse> LoginTrainer(
+    public static async Task<ErrorProne<AuthenticationResponse>> LoginTrainer(
         [Service] ISender mediator,
         [Service] IMapper mapper,
-        LoginTrainerRequest request,
+        LoginTrainerCommand request,
         CancellationToken cancellationToken)
         => await mediator.Send(mapper.Map<LoginTrainerCommand>(request), cancellationToken);
 }

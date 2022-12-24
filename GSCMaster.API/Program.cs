@@ -1,8 +1,5 @@
-using GSCMaster.API.GraphQL.Mutations;
-using GSCMaster.API.GraphQL.Queries;
 using GSCMaster.Application;
 using GSCMaster.Infrastructure;
-using GSCMaster.Infrastructure.Database;
 using GSCMaster.Infrastructure.Seeding;
 using HotChocolate.AspNetCore;
 
@@ -17,14 +14,7 @@ var builder = WebApplication.CreateBuilder(args);
         .AddAuthorization()
         .AddObjectIdConverters()
         .AddMongoDbProjections()
-
-        .AddQueryType()
-        .AddType<PokemonQueries>()
-        .AddType<ItemQueries>()
-
-        .AddMutationType()
-        .AddType<AuthenticationMutations>()
-
+        .ConfigureSchema(sb => sb.ModifyOptions(opts => opts.StrictValidation = false))
         .InitializeOnStartup();
 
     builder.Services.AddCors();
@@ -48,11 +38,11 @@ var app = builder.Build();
         EnableGetRequests = true
     });
 
-    var db = app.Services.GetRequiredService<GSCMasterDbContext>();
+    var db = app.Services.GetRequiredService<GSCMasterDBConnection>();
     {
-        Seeder.SeedItems(db);
-        Seeder.SeedTypes(db);
-        Seeder.SeedPokemon(db);
+        // db.SeedItems();
+        db.SeedTypes();
+        db.SeedPokemon();
     }
 
     app.Run();

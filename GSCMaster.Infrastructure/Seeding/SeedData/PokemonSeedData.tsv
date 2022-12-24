@@ -1,252 +1,252 @@
-NationalNumber	Name	Tier	PrimaryType	SecondaryType	PreEvolution	HP	Attack	Defense	SpAttack	SpAttack	Speed
-1	Bulbasaur	LC	Grass	Poison		45	49	49	65	65	45
-2	Ivysaur	NFE	Grass	Poison	Bulbasaur	60	62	63	80	80	60
-3	Venusaur	UUBL	Grass	Poison	Ivysaur	80	82	83	100	100	80
-4	Charmander	LC	Fire	None		39	52	43	60	50	65
-5	Charmeleon	NFE	Fire	None	Charmander	58	64	58	80	65	80
-6	Charizard	UUBL	Fire	Flying	Charmeleon	78	84	78	109	85	100
-7	Squirtle	LC	Water	None		44	48	65	50	64	43
-8	Wartortle	NFE	Water	None	Squirtle	59	63	80	65	80	58
-9	Blastoise	UU	Water	None	Wartortle	79	83	100	85	105	78
-10	Caterpie	LC	Bug	None		45	30	35	20	20	45
-11	Metapod	NFE	Bug	None	Caterpie	50	20	55	25	25	30
-12	Butterfree	NU	Bug	Flying	Metapod	60	45	50	90	80	70
-13	Weedle	LC	Bug	Poison		40	35	30	20	20	50
-14	Kakuna	NFE	Bug	Poison	Weedle	45	25	50	25	25	35
-15	Beedrill	NU	Bug	Poison	Kakuna	65	90	40	45	80	75
-16	Pidgey	LC	Normal	Flying		40	45	40	35	35	56
-17	Pidgeotto	NFE	Normal	Flying	Pidgey	63	60	55	50	50	71
-18	Pidgeot	NU	Normal	Flying	Pidgeotto	83	80	75	70	70	101
-19	Rattata	LC	Normal	None		30	56	35	25	35	72
-20	Raticate	NU	Normal	None	Rattata	55	81	60	50	70	97
-21	Spearow	LC	Normal	Flying		40	60	30	31	31	70
-22	Fearow	NU	Normal	Flying	Spearow	65	90	65	61	61	100
-23	Ekans	LC	Poison	None		35	60	44	40	54	55
-24	Arbok	NU	Poison	None	Ekans	60	85	69	65	79	80
-25	Pikachu	UU	Electric	None	Pichu	35	55	40	50	50	90
-26	Raichu	NUBL	Electric	None	Pikachu	60	90	55	90	80	110
-27	Sandshrew	LC	Ground	None		50	75	85	20	30	40
-28	Sandslash	UU	Ground	None	Sandshrew	75	100	110	45	55	65
-29	Nidoran♀	LC	Poison	None		55	47	52	40	40	41
-30	Nidorina	NFE	Poison	None	Nidoran♀	70	62	67	55	55	56
-31	Nidoqueen	UU	Poison	Ground	Nidorina	90	92	87	75	85	76
-32	Nidoran♂	LC	Poison	None		46	57	40	40	40	50
-33	Nidorino	NFE	Poison	None	Nidoran♂	61	72	57	55	55	65
-34	Nidoking	OU	Poison	Ground	Nidorino	81	102	77	85	75	85
-35	Clefairy	NFE	Normal	None	Cleffa	70	45	48	60	65	35
-36	Clefable	UUBL	Normal	None	Clefairy	95	70	73	95	90	60
-37	Vulpix	LC	Fire	None		38	41	40	50	65	65
-38	Ninetales	NU	Fire	None	Vulpix	73	76	75	81	100	100
-39	Jigglypuff	NFE	Normal	Normal	Igglybuff	115	45	20	45	25	20
-40	Wigglytuff	NU	Normal	Normal	Jigglypuff	140	70	45	85	50	45
-41	Zubat	LC	Poison	Flying		40	45	35	30	40	55
-42	Golbat	NFE	Poison	Flying	Zubat	75	80	70	65	75	90
-43	Oddish	LC	Grass	Poison		45	50	55	75	65	30
-44	Gloom	NU	Grass	Poison	Oddish	60	65	70	85	75	40
-45	Vileplume	UU	Grass	Poison	Gloom	75	80	85	110	90	50
-46	Paras	LC	Bug	Grass		35	70	55	45	55	25
-47	Parasect	NU	Bug	Grass	Paras	60	95	80	60	80	30
-48	Venonat	LC	Bug	Poison		60	55	50	40	55	45
-49	Venomoth	NU	Bug	Poison	Venonat	70	65	60	90	75	90
-50	Diglett	LC	Ground	None		10	55	25	35	45	95
-51	Dugtrio	NU	Ground	None	Diglett	35	80	50	50	70	120
-52	Meowth	LC	Normal	None		40	45	35	40	40	90
-53	Persian	NU	Normal	None	Meowth	65	70	60	65	65	115
-54	Psyduck	LC	Water	None		50	52	48	65	50	55
-55	Golduck	NUBL	Water	None	Psyduck	80	82	78	95	80	85
-56	Mankey	LC	Fighting	None		40	80	35	35	45	70
-57	Primeape	NU	Fighting	None	Mankey	65	105	60	60	70	95
-58	Growlithe	LC	Fire	None		55	70	45	70	50	60
-59	Arcanine	UU	Fire	None	Growlithe	90	110	80	100	80	95
-60	Poliwag	LC	Water	None		40	50	40	40	40	90
-61	Poliwhirl	NU	Water	None	Poliwag	65	65	65	50	50	90
-62	Poliwrath	NUBL	Water	Fighting	Poliwhirl	90	95	95	70	90	70
-63	Abra	LC	Psychic	None		25	20	15	105	55	90
-64	Kadabra	UU	Psychic	None	Abra	40	35	30	120	70	105
-65	Alakazam	UUBL	Psychic	None	Kadabra	55	50	45	135	95	120
-66	Machop	LC	Fighting	None		70	80	50	35	35	35
-67	Machoke	NU	Fighting	None	Machop	80	100	70	50	60	45
-68	Machamp	OU	Fighting	None	Machoke	90	130	80	65	85	55
-69	Bellsprout	LC	Grass	Poison		50	75	35	70	30	40
-70	Weepinbell	NFE	Grass	Poison	Bellsprout	65	90	50	85	45	55
-71	Victreebel	UU	Grass	Poison	Weepinbell	80	105	65	100	70	70
-72	Tentacool	NU	Water	Poison		40	40	35	50	100	70
-73	Tentacruel	UUBL	Water	Poison	Tentacool	80	70	65	80	120	100
-74	Geodude	LC	Rock	Ground		40	80	100	30	30	20
-75	Graveler	NU	Rock	Ground	Geodude	55	95	115	45	45	35
-76	Golem	OU	Rock	Ground	Graveler	80	120	130	55	65	45
-77	Ponyta	LC	Fire	None		50	85	55	65	65	90
-78	Rapidash	NU	Fire	None	Ponyta	65	100	70	80	80	105
-79	Slowpoke	NU	Water	Psychic		90	65	65	40	40	15
-80	Slowbro	UU	Water	Psychic	Slowpoke	95	75	110	100	80	30
-81	Magnemite	NU	Electric	Steel		25	35	70	95	55	45
-82	Magneton	UU	Electric	Steel	Magnemite	50	60	95	120	70	70
-83	Farfetch'd	NU	Normal	Flying		52	65	55	58	62	60
-84	Doduo	LC	Normal	Flying		35	85	45	35	35	75
-85	Dodrio	UU	Normal	Flying	Doduo	60	110	70	60	60	100
-86	Seel	LC	Water	None		65	45	55	45	70	45
-87	Dewgong	NU	Water	Ice	Seel	90	70	80	70	95	70
-88	Grimer	LC	Poison	None		80	80	50	40	50	25
-89	Muk	UUBL	Poison	None	Grimer	105	105	75	65	100	50
-90	Shellder	LC	Water	None		30	65	100	45	25	40
-91	Cloyster	OU	Water	Ice	Shellder	50	95	180	85	45	70
-92	Gastly	NU	Ghost	Poison		30	35	30	100	35	80
-93	Haunter	UU	Ghost	Poison	Gastly	45	50	45	115	55	95
-94	Gengar	OU	Ghost	Poison	Haunter	60	65	60	130	75	110
-95	Onix	LC	Rock	Ground		35	45	160	30	45	70
-96	Drowzee	LC	Psychic	None		60	48	45	43	90	42
-97	Hypno	UU	Psychic	None	Drowzee	85	73	70	73	115	67
-98	Krabby	LC	Water	None		30	105	90	25	25	50
-99	Kingler	NU	Water	None	Krabby	55	130	115	50	50	75
-100	Voltorb	NU	Electric	None		40	30	50	55	55	100
-101	Electrode	UU	Electric	None	Voltorb	60	50	70	80	80	140
-102	Exeggcute	NU	Grass	Psychic		60	40	80	60	45	40
-103	Exeggutor	OU	Grass	Psychic	Exeggcute	95	95	85	125	65	55
-104	Cubone	NU	Ground	None		50	50	95	40	50	35
-105	Marowak	OU	Ground	None	Cubone	60	80	110	50	80	45
-106	Hitmonlee	NU	Fighting	None	Tyrogue	50	120	53	35	110	87
-107	Hitmonchan	NU	Fighting	None	Tyrogue	50	105	79	35	110	76
-108	Lickitung	NU	Normal	None		90	55	75	60	75	30
-109	Koffing	LC	Poison	None		40	65	95	60	45	35
-110	Weezing	NU	Poison	None	Koffing	65	90	120	85	70	60
-111	Rhyhorn	LC	Ground	Rock		80	85	95	30	30	25
-112	Rhydon	OU	Ground	Rock	Rhyhorn	105	130	120	45	45	40
-113	Chansey	UU	Normal	None		250	5	5	35	105	50
-114	Tangela	NU	Grass	None		65	55	115	100	40	60
-115	Kangaskhan	UUBL	Normal	None		105	95	80	40	80	90
-116	Horsea	LC	Water	None		30	40	70	70	25	60
-117	Seadra	NU	Water	None	Horsea	55	65	95	95	45	85
-118	Goldeen	LC	Water	None		45	67	60	35	50	63
-119	Seaking	NU	Water	None	Goldeen	80	92	65	65	80	68
-120	Staryu	LC	Water	None		30	45	55	70	55	85
-121	Starmie	OU	Water	Psychic	Staryu	60	75	85	100	85	115
-122	Mr. Mime	UU	Psychic	Normal		40	45	65	100	120	90
-123	Scyther	UU	Bug	Flying		70	110	80	55	80	105
-124	Jynx	OU	Ice	Psychic	Smoochum	65	50	35	115	95	95
-125	Electabuzz	UU	Electric	None	Elekid	65	83	57	95	85	105
-126	Magmar	NU	Fire	None	Magby	65	95	57	100	85	93
-127	Pinsir	UU	Bug	None		65	125	100	55	70	85
-128	Tauros	UUBL	Normal	None		75	100	95	40	70	110
-129	Magikarp	LC	Water	None		20	10	55	15	20	80
-130	Gyarados	UU	Water	Flying	Magikarp	95	125	79	60	100	81
-131	Lapras	UUBL	Water	Ice		130	85	80	85	95	60
-132	Ditto	NU	Normal	None		48	48	48	48	48	48
-133	Eevee	LC	Normal	None		55	55	50	45	65	55
-134	Vaporeon	OU	Water	None	Eevee	130	65	60	110	95	65
-135	Jolteon	UUBL	Electric	None	Eevee	65	65	60	110	95	130
-136	Flareon	NU	Fire	None	Eevee	65	130	60	95	110	65
-137	Porygon	NU	Normal	None		65	60	70	85	75	40
-138	Omanyte	LC	Rock	Water		35	40	100	90	55	35
-139	Omastar	UU	Rock	Water	Omanyte	70	60	125	115	70	55
-140	Kabuto	LC	Rock	Water		30	80	90	55	45	55
-141	Kabutops	UU	Rock	Water	Kabuto	60	115	105	65	70	80
-142	Aerodactyl	UUBL	Rock	Flying		80	105	65	60	75	130
-143	Snorlax	OU	Normal	None		160	110	65	65	110	30
-144	Articuno	UUBL	Ice	Flying		90	85	100	95	125	85
-145	Zapdos	OU	Electric	Flying		90	90	85	125	90	100
-146	Moltres	UUBL	Fire	Flying		90	100	90	125	85	90
-147	Dratini	LC	Dragon	None		41	64	45	50	50	50
-148	Dragonair	NU	Dragon	None	Dratini	61	84	65	70	70	70
-149	Dragonite	UUBL	Dragon	Flying	Dragonair	91	134	95	100	100	80
-150	Mewtwo	Uber	Psychic	None		106	110	90	154	90	130
-151	Mew	Uber	Psychic	None		100	100	100	100	100	100
-152	Chikorita	LC	Grass	None		45	49	65	49	65	45
-153	Bayleef	NU	Grass	None	Chikorita	60	62	80	63	80	60
-154	Meganium	UUBL	Grass	None	Bayleef	80	82	100	83	100	80
-155	Cyndaquil	LC	Fire	None		39	52	43	60	50	65
-156	Quilava	NFE	Fire	None	Cyndaquil	58	64	58	80	65	80
-157	Typhlosion	UUBL	Fire	None	Quilava	78	84	78	109	85	100
-158	Totodile	LC	Water	None		50	65	64	44	48	43
-159	Croconaw	NFE	Water	None	Totodile	65	80	80	59	63	58
-160	Feraligatr	NUBL	Water	None	Croconaw	85	105	100	79	83	78
-161	Sentret	LC	Normal	None		35	46	34	35	45	20
-162	Furret	NU	Normal	None	Sentret	85	76	64	45	55	90
-163	Hoothoot	LC	Normal	Flying		60	30	30	36	56	50
-164	Noctowl	NU	Normal	Flying	Hoothoot	100	50	50	76	96	70
-165	Ledyba	LC	Bug	Flying		40	20	30	40	80	55
-166	Ledian	NU	Bug	Flying	Ledyba	55	35	50	55	110	85
-167	Spinarak	LC	Bug	Poison		40	60	40	40	40	30
-168	Ariados	NU	Bug	Poison	Spinarak	70	90	70	60	60	40
-169	Crobat	UU	Poison	Flying	Golbat	85	90	80	70	80	130
-170	Chinchou	NU	Water	Electric		75	38	38	56	56	67
-171	Lanturn	UU	Water	Electric	Chinchou	125	58	58	76	76	67
-172	Pichu	LC	Electric	None		20	40	15	35	35	60
-173	Cleffa	LC	Normal	None		50	25	28	45	55	15
-174	Igglybuff	LC	Normal	Normal		90	30	15	40	20	15
-175	Togepi	LC	Normal	None		35	20	65	40	65	20
-176	Togetic	NU	Normal	Flying	Togepi	55	40	85	80	105	40
-177	Natu	LC	Psychic	Flying		40	50	45	70	45	70
-178	Xatu	NU	Psychic	Flying	Natu	65	75	70	95	70	95
-179	Mareep	LC	Electric	None		55	40	40	65	45	35
-180	Flaaffy	NU	Electric	None	Mareep	70	55	55	80	60	45
-181	Ampharos	UU	Electric	None	Flaaffy	90	75	85	115	90	55
-182	Bellossom	UU	Grass	None		75	80	95	90	100	50
-183	Marill	LC	Water	Normal		70	20	50	20	50	40
-184	Azumarill	NU	Water	Normal	Marill	100	50	80	60	80	50
-185	Sudowoodo	NU	Rock	None		70	100	115	30	65	30
-186	Politoed	UU	Water	None	Poliwhirl	90	75	75	90	100	70
-187	Hoppip	LC	Grass	Flying		35	35	40	35	55	50
-188	Skiploom	NFE	Grass	Flying	Hoppip	55	45	50	45	65	80
-189	Jumpluff	UU	Grass	Flying	Skiploom	75	55	70	55	95	110
-190	Aipom	NU	Normal	None		55	70	55	40	55	85
-191	Sunkern	LC	Grass	None		30	30	30	30	30	30
-192	Sunflora	NU	Grass	None	Sunkern	75	75	55	105	85	30
-193	Yanma	NU	Bug	Flying		65	65	45	75	45	95
-194	Wooper	LC	Water	Ground		55	45	45	25	25	15
-195	Quagsire	UU	Water	Ground	Wooper	95	85	85	65	65	35
-196	Espeon	UUBL	Psychic	None	Eevee	65	65	60	130	95	110
-197	Umbreon	OU	Dark	None	Eevee	95	65	110	60	130	65
-198	Murkrow	NU	Dark	Flying		60	85	42	85	42	91
-199	Slowking	UU	Water	Psychic	Slowbro	95	75	80	100	110	30
-200	Misdreavus	OU	Ghost	None		60	60	60	85	85	85
-201	Unown	NU	Psychic	None		48	72	48	72	48	48
-202	Wobbuffet	NU	Psychic	None		190	33	58	33	58	33
-203	Girafarig	UU	Normal	Psychic		70	80	65	90	65	85
-204	Pineco	NU	Bug	None		50	65	90	35	35	15
-205	Forretress	OU	Bug	Steel	Pineco	75	90	140	60	60	40
-206	Dunsparce	NU	Normal	None		100	70	70	65	65	45
-207	Gligar	UU	Ground	Flying		65	75	105	35	65	85
-208	Steelix	OU	Steel	Ground	Onix	75	85	200	55	65	30
-209	Snubbull	LC	Normal	None		60	80	50	40	40	30
-210	Granbull	UU	Normal	None	Snubbull	90	120	75	60	60	45
-211	Qwilfish	UU	Water	Poison		65	95	75	55	55	85
-212	Scizor	UUBL	Bug	Steel	Scyther	70	130	100	55	80	65
-213	Shuckle	NU	Bug	Rock		20	10	230	10	230	5
-214	Heracross	OU	Bug	Fighting		80	125	75	40	95	85
-215	Sneasel	NU	Dark	Ice		55	95	55	35	75	115
-216	Teddiursa	LC	Normal	None		60	80	50	50	50	40
-217	Ursaring	UUBL	Normal	None	Teddiursa	90	130	75	75	75	55
-218	Slugma	LC	Fire	None		40	40	40	70	40	20
-219	Magcargo	NU	Fire	Rock	Slugma	50	50	120	80	80	30
-220	Swinub	LC	Ice	Ground		50	50	40	30	30	50
-221	Piloswine	UU	Ice	Ground	Swinub	100	100	80	60	60	50
-222	Corsola	NU	Water	Rock		55	55	85	65	85	35
-223	Remoraid	LC	Water	None		35	65	35	65	35	65
-224	Octillery	NU	Water	None	Remoraid	75	105	75	105	75	45
-225	Delibird	NU	Ice	Flying		45	55	45	65	45	75
-226	Mantine	NU	Water	Flying		65	40	70	80	140	70
-227	Skarmory	OU	Steel	Flying		65	80	140	40	70	70
-228	Houndour	NU	Dark	Fire		45	60	30	80	50	65
-229	Houndoom	UUBL	Dark	Fire	Houndour	75	90	50	110	80	95
-230	Kingdra	UUBL	Water	Dragon	Seadra	75	95	95	95	95	85
-231	Phanpy	LC	Ground	None		90	60	60	40	40	40
-232	Donphan	UUBL	Ground	None	Phanpy	90	120	120	60	60	50
-233	Porygon2	UUBL	Normal	None	Porygon	85	80	90	105	95	60
-234	Stantler	NU	Normal	None		73	95	62	85	65	85
-235	Smeargle	UUBL	Normal	None		55	20	35	20	45	75
-236	Tyrogue	LC	Fighting	None		35	35	35	35	35	35
-237	Hitmontop	NU	Fighting	None	Tyrogue	50	95	95	35	110	70
-238	Smoochum	LC	Ice	Psychic		45	30	15	85	65	65
-239	Elekid	NU	Electric	None		45	63	37	65	55	95
-240	Magby	LC	Fire	None		45	75	37	70	55	83
-241	Miltank	OU	Normal	None		95	80	105	40	70	100
-242	Blissey	OU	Normal	None	Chansey	255	10	10	75	135	55
-243	Raikou	OU	Electric	None		90	85	75	115	100	115
-244	Entei	UUBL	Fire	None		115	115	85	90	75	100
-245	Suicune	OU	Water	None		100	75	115	90	115	85
-246	Larvitar	LC	Rock	Ground		50	64	50	45	50	41
-247	Pupitar	NU	Rock	Ground	Larvitar	70	84	70	65	70	51
-248	Tyranitar	OU	Rock	Dark	Pupitar	100	134	110	95	100	61
-249	Lugia	Uber	Psychic	Flying		106	90	130	90	154	110
-250	Ho-oh	Uber	Fire	Flying		106	130	90	110	154	90
-251	Celebi	Uber	Psychic	Grass		100	100	100	100	100	100
+NationalNumber	Name	Tier	PrimaryType	SecondaryType	PreEvolution	HP	Attack	Defense	SpAttack	SpAttack	Speed	DefaultGender
+1	Bulbasaur	LC	Grass	Poison		45	49	49	65	65	45	Random
+2	Ivysaur	NFE	Grass	Poison	Bulbasaur	60	62	63	80	80	60	Random
+3	Venusaur	UUBL	Grass	Poison	Ivysaur	80	82	83	100	100	80	Random
+4	Charmander	LC	Fire	None		39	52	43	60	50	65	Random
+5	Charmeleon	NFE	Fire	None	Charmander	58	64	58	80	65	80	Random
+6	Charizard	UUBL	Fire	Flying	Charmeleon	78	84	78	109	85	100	Random
+7	Squirtle	LC	Water	None		44	48	65	50	64	43	Random
+8	Wartortle	NFE	Water	None	Squirtle	59	63	80	65	80	58	Random
+9	Blastoise	UU	Water	None	Wartortle	79	83	100	85	105	78	Random
+10	Caterpie	LC	Bug	None		45	30	35	20	20	45	Random
+11	Metapod	NFE	Bug	None	Caterpie	50	20	55	25	25	30	Random
+12	Butterfree	NU	Bug	Flying	Metapod	60	45	50	90	80	70	Random
+13	Weedle	LC	Bug	Poison		40	35	30	20	20	50	Random
+14	Kakuna	NFE	Bug	Poison	Weedle	45	25	50	25	25	35	Random
+15	Beedrill	NU	Bug	Poison	Kakuna	65	90	40	45	80	75	Random
+16	Pidgey	LC	Normal	Flying		40	45	40	35	35	56	Random
+17	Pidgeotto	NFE	Normal	Flying	Pidgey	63	60	55	50	50	71	Random
+18	Pidgeot	NU	Normal	Flying	Pidgeotto	83	80	75	70	70	101	Random
+19	Rattata	LC	Normal	None		30	56	35	25	35	72	Random
+20	Raticate	NU	Normal	None	Rattata	55	81	60	50	70	97	Random
+21	Spearow	LC	Normal	Flying		40	60	30	31	31	70	Random
+22	Fearow	NU	Normal	Flying	Spearow	65	90	65	61	61	100	Random
+23	Ekans	LC	Poison	None		35	60	44	40	54	55	Random
+24	Arbok	NU	Poison	None	Ekans	60	85	69	65	79	80	Random
+25	Pikachu	UU	Electric	None	Pichu	35	55	40	50	50	90	Random
+26	Raichu	NUBL	Electric	None	Pikachu	60	90	55	90	80	110	Random
+27	Sandshrew	LC	Ground	None		50	75	85	20	30	40	Random
+28	Sandslash	UU	Ground	None	Sandshrew	75	100	110	45	55	65	Random
+29	Nidoran♀	LC	Poison	None		55	47	52	40	40	41	Random
+30	Nidorina	NFE	Poison	None	Nidoran♀	70	62	67	55	55	56	Random
+31	Nidoqueen	UU	Poison	Ground	Nidorina	90	92	87	75	85	76	Random
+32	Nidoran♂	LC	Poison	None		46	57	40	40	40	50	Random
+33	Nidorino	NFE	Poison	None	Nidoran♂	61	72	57	55	55	65	Random
+34	Nidoking	OU	Poison	Ground	Nidorino	81	102	77	85	75	85	Random
+35	Clefairy	NFE	Normal	None	Cleffa	70	45	48	60	65	35	Random
+36	Clefable	UUBL	Normal	None	Clefairy	95	70	73	95	90	60	Random
+37	Vulpix	LC	Fire	None		38	41	40	50	65	65	Random
+38	Ninetales	NU	Fire	None	Vulpix	73	76	75	81	100	100	Random
+39	Jigglypuff	NFE	Normal	Normal	Igglybuff	115	45	20	45	25	20	Random
+40	Wigglytuff	NU	Normal	Normal	Jigglypuff	140	70	45	85	50	45	Random
+41	Zubat	LC	Poison	Flying		40	45	35	30	40	55	Random
+42	Golbat	NFE	Poison	Flying	Zubat	75	80	70	65	75	90	Random
+43	Oddish	LC	Grass	Poison		45	50	55	75	65	30	Random
+44	Gloom	NU	Grass	Poison	Oddish	60	65	70	85	75	40	Random
+45	Vileplume	UU	Grass	Poison	Gloom	75	80	85	110	90	50	Random
+46	Paras	LC	Bug	Grass		35	70	55	45	55	25	Random
+47	Parasect	NU	Bug	Grass	Paras	60	95	80	60	80	30	Random
+48	Venonat	LC	Bug	Poison		60	55	50	40	55	45	Random
+49	Venomoth	NU	Bug	Poison	Venonat	70	65	60	90	75	90	Random
+50	Diglett	LC	Ground	None		10	55	25	35	45	95	Random
+51	Dugtrio	NU	Ground	None	Diglett	35	80	50	50	70	120	Random
+52	Meowth	LC	Normal	None		40	45	35	40	40	90	Random
+53	Persian	NU	Normal	None	Meowth	65	70	60	65	65	115	Random
+54	Psyduck	LC	Water	None		50	52	48	65	50	55	Random
+55	Golduck	NUBL	Water	None	Psyduck	80	82	78	95	80	85	Random
+56	Mankey	LC	Fighting	None		40	80	35	35	45	70	Random
+57	Primeape	NU	Fighting	None	Mankey	65	105	60	60	70	95	Random
+58	Growlithe	LC	Fire	None		55	70	45	70	50	60	Random
+59	Arcanine	UU	Fire	None	Growlithe	90	110	80	100	80	95	Random
+60	Poliwag	LC	Water	None		40	50	40	40	40	90	Random
+61	Poliwhirl	NU	Water	None	Poliwag	65	65	65	50	50	90	Random
+62	Poliwrath	NUBL	Water	Fighting	Poliwhirl	90	95	95	70	90	70	Random
+63	Abra	LC	Psychic	None		25	20	15	105	55	90	Random
+64	Kadabra	UU	Psychic	None	Abra	40	35	30	120	70	105	Random
+65	Alakazam	UUBL	Psychic	None	Kadabra	55	50	45	135	95	120	Random
+66	Machop	LC	Fighting	None		70	80	50	35	35	35	Random
+67	Machoke	NU	Fighting	None	Machop	80	100	70	50	60	45	Random
+68	Machamp	OU	Fighting	None	Machoke	90	130	80	65	85	55	Random
+69	Bellsprout	LC	Grass	Poison		50	75	35	70	30	40	Random
+70	Weepinbell	NFE	Grass	Poison	Bellsprout	65	90	50	85	45	55	Random
+71	Victreebel	UU	Grass	Poison	Weepinbell	80	105	65	100	70	70	Random
+72	Tentacool	NU	Water	Poison		40	40	35	50	100	70	Random
+73	Tentacruel	UUBL	Water	Poison	Tentacool	80	70	65	80	120	100	Random
+74	Geodude	LC	Rock	Ground		40	80	100	30	30	20	Random
+75	Graveler	NU	Rock	Ground	Geodude	55	95	115	45	45	35	Random
+76	Golem	OU	Rock	Ground	Graveler	80	120	130	55	65	45	Random
+77	Ponyta	LC	Fire	None		50	85	55	65	65	90	Random
+78	Rapidash	NU	Fire	None	Ponyta	65	100	70	80	80	105	Random
+79	Slowpoke	NU	Water	Psychic		90	65	65	40	40	15	Random
+80	Slowbro	UU	Water	Psychic	Slowpoke	95	75	110	100	80	30	Random
+81	Magnemite	NU	Electric	Steel		25	35	70	95	55	45	Genderless
+82	Magneton	UU	Electric	Steel	Magnemite	50	60	95	120	70	70	Genderless
+83	Farfetch'd	NU	Normal	Flying		52	65	55	58	62	60	Random
+84	Doduo	LC	Normal	Flying		35	85	45	35	35	75	Random
+85	Dodrio	UU	Normal	Flying	Doduo	60	110	70	60	60	100	Random
+86	Seel	LC	Water	None		65	45	55	45	70	45	Random
+87	Dewgong	NU	Water	Ice	Seel	90	70	80	70	95	70	Random
+88	Grimer	LC	Poison	None		80	80	50	40	50	25	Random
+89	Muk	UUBL	Poison	None	Grimer	105	105	75	65	100	50	Random
+90	Shellder	LC	Water	None		30	65	100	45	25	40	Random
+91	Cloyster	OU	Water	Ice	Shellder	50	95	180	85	45	70	Random
+92	Gastly	NU	Ghost	Poison		30	35	30	100	35	80	Random
+93	Haunter	UU	Ghost	Poison	Gastly	45	50	45	115	55	95	Random
+94	Gengar	OU	Ghost	Poison	Haunter	60	65	60	130	75	110	Random
+95	Onix	LC	Rock	Ground		35	45	160	30	45	70	Random
+96	Drowzee	LC	Psychic	None		60	48	45	43	90	42	Random
+97	Hypno	UU	Psychic	None	Drowzee	85	73	70	73	115	67	Random
+98	Krabby	LC	Water	None		30	105	90	25	25	50	Random
+99	Kingler	NU	Water	None	Krabby	55	130	115	50	50	75	Random
+100	Voltorb	NU	Electric	None		40	30	50	55	55	100	Genderless
+101	Electrode	UU	Electric	None	Voltorb	60	50	70	80	80	140	Genderless
+102	Exeggcute	NU	Grass	Psychic		60	40	80	60	45	40	Random
+103	Exeggutor	OU	Grass	Psychic	Exeggcute	95	95	85	125	65	55	Random
+104	Cubone	NU	Ground	None		50	50	95	40	50	35	Random
+105	Marowak	OU	Ground	None	Cubone	60	80	110	50	80	45	Random
+106	Hitmonlee	NU	Fighting	None	Tyrogue	50	120	53	35	110	87	Male
+107	Hitmonchan	NU	Fighting	None	Tyrogue	50	105	79	35	110	76	Male
+108	Lickitung	NU	Normal	None		90	55	75	60	75	30	Random
+109	Koffing	LC	Poison	None		40	65	95	60	45	35	Random
+110	Weezing	NU	Poison	None	Koffing	65	90	120	85	70	60	Random
+111	Rhyhorn	LC	Ground	Rock		80	85	95	30	30	25	Random
+112	Rhydon	OU	Ground	Rock	Rhyhorn	105	130	120	45	45	40	Random
+113	Chansey	UU	Normal	None		250	5	5	35	105	50	Female
+114	Tangela	NU	Grass	None		65	55	115	100	40	60	Random
+115	Kangaskhan	UUBL	Normal	None		105	95	80	40	80	90	Female
+116	Horsea	LC	Water	None		30	40	70	70	25	60	Random
+117	Seadra	NU	Water	None	Horsea	55	65	95	95	45	85	Random
+118	Goldeen	LC	Water	None		45	67	60	35	50	63	Random
+119	Seaking	NU	Water	None	Goldeen	80	92	65	65	80	68	Random
+120	Staryu	LC	Water	None		30	45	55	70	55	85	Genderless
+121	Starmie	OU	Water	Psychic	Staryu	60	75	85	100	85	115	Genderless
+122	Mr. Mime	UU	Psychic	Normal		40	45	65	100	120	90	Random
+123	Scyther	UU	Bug	Flying		70	110	80	55	80	105	Random
+124	Jynx	OU	Ice	Psychic	Smoochum	65	50	35	115	95	95	Female
+125	Electabuzz	UU	Electric	None	Elekid	65	83	57	95	85	105	Random
+126	Magmar	NU	Fire	None	Magby	65	95	57	100	85	93	Random
+127	Pinsir	UU	Bug	None		65	125	100	55	70	85	Random
+128	Tauros	UUBL	Normal	None		75	100	95	40	70	110	Random
+129	Magikarp	LC	Water	None		20	10	55	15	20	80	Random
+130	Gyarados	UU	Water	Flying	Magikarp	95	125	79	60	100	81	Random
+131	Lapras	UUBL	Water	Ice		130	85	80	85	95	60	Random
+132	Ditto	NU	Normal	None		48	48	48	48	48	48	Genderless
+133	Eevee	LC	Normal	None		55	55	50	45	65	55	Random
+134	Vaporeon	OU	Water	None	Eevee	130	65	60	110	95	65	Random
+135	Jolteon	UUBL	Electric	None	Eevee	65	65	60	110	95	130	Random
+136	Flareon	NU	Fire	None	Eevee	65	130	60	95	110	65	Random
+137	Porygon	NU	Normal	None		65	60	70	85	75	40	Genderless
+138	Omanyte	LC	Rock	Water		35	40	100	90	55	35	Random
+139	Omastar	UU	Rock	Water	Omanyte	70	60	125	115	70	55	Random
+140	Kabuto	LC	Rock	Water		30	80	90	55	45	55	Random
+141	Kabutops	UU	Rock	Water	Kabuto	60	115	105	65	70	80	Random
+142	Aerodactyl	UUBL	Rock	Flying		80	105	65	60	75	130	Random
+143	Snorlax	OU	Normal	None		160	110	65	65	110	30	Random
+144	Articuno	UUBL	Ice	Flying		90	85	100	95	125	85	Genderless
+145	Zapdos	OU	Electric	Flying		90	90	85	125	90	100	Genderless
+146	Moltres	UUBL	Fire	Flying		90	100	90	125	85	90	Genderless
+147	Dratini	LC	Dragon	None		41	64	45	50	50	50	Random
+148	Dragonair	NU	Dragon	None	Dratini	61	84	65	70	70	70	Random
+149	Dragonite	UUBL	Dragon	Flying	Dragonair	91	134	95	100	100	80	Random
+150	Mewtwo	Uber	Psychic	None		106	110	90	154	90	130	Genderless
+151	Mew	Uber	Psychic	None		100	100	100	100	100	100	Genderless
+152	Chikorita	LC	Grass	None		45	49	65	49	65	45	Random
+153	Bayleef	NU	Grass	None	Chikorita	60	62	80	63	80	60	Random
+154	Meganium	UUBL	Grass	None	Bayleef	80	82	100	83	100	80	Random
+155	Cyndaquil	LC	Fire	None		39	52	43	60	50	65	Random
+156	Quilava	NFE	Fire	None	Cyndaquil	58	64	58	80	65	80	Random
+157	Typhlosion	UUBL	Fire	None	Quilava	78	84	78	109	85	100	Random
+158	Totodile	LC	Water	None		50	65	64	44	48	43	Random
+159	Croconaw	NFE	Water	None	Totodile	65	80	80	59	63	58	Random
+160	Feraligatr	NUBL	Water	None	Croconaw	85	105	100	79	83	78	Random
+161	Sentret	LC	Normal	None		35	46	34	35	45	20	Random
+162	Furret	NU	Normal	None	Sentret	85	76	64	45	55	90	Random
+163	Hoothoot	LC	Normal	Flying		60	30	30	36	56	50	Random
+164	Noctowl	NU	Normal	Flying	Hoothoot	100	50	50	76	96	70	Random
+165	Ledyba	LC	Bug	Flying		40	20	30	40	80	55	Random
+166	Ledian	NU	Bug	Flying	Ledyba	55	35	50	55	110	85	Random
+167	Spinarak	LC	Bug	Poison		40	60	40	40	40	30	Random
+168	Ariados	NU	Bug	Poison	Spinarak	70	90	70	60	60	40	Random
+169	Crobat	UU	Poison	Flying	Golbat	85	90	80	70	80	130	Random
+170	Chinchou	NU	Water	Electric		75	38	38	56	56	67	Random
+171	Lanturn	UU	Water	Electric	Chinchou	125	58	58	76	76	67	Random
+172	Pichu	LC	Electric	None		20	40	15	35	35	60	Random
+173	Cleffa	LC	Normal	None		50	25	28	45	55	15	Random
+174	Igglybuff	LC	Normal	Normal		90	30	15	40	20	15	Random
+175	Togepi	LC	Normal	None		35	20	65	40	65	20	Random
+176	Togetic	NU	Normal	Flying	Togepi	55	40	85	80	105	40	Random
+177	Natu	LC	Psychic	Flying		40	50	45	70	45	70	Random
+178	Xatu	NU	Psychic	Flying	Natu	65	75	70	95	70	95	Random
+179	Mareep	LC	Electric	None		55	40	40	65	45	35	Random
+180	Flaaffy	NU	Electric	None	Mareep	70	55	55	80	60	45	Random
+181	Ampharos	UU	Electric	None	Flaaffy	90	75	85	115	90	55	Random
+182	Bellossom	UU	Grass	None		75	80	95	90	100	50	Random
+183	Marill	LC	Water	Normal		70	20	50	20	50	40	Random
+184	Azumarill	NU	Water	Normal	Marill	100	50	80	60	80	50	Random
+185	Sudowoodo	NU	Rock	None		70	100	115	30	65	30	Random
+186	Politoed	UU	Water	None	Poliwhirl	90	75	75	90	100	70	Random
+187	Hoppip	LC	Grass	Flying		35	35	40	35	55	50	Random
+188	Skiploom	NFE	Grass	Flying	Hoppip	55	45	50	45	65	80	Random
+189	Jumpluff	UU	Grass	Flying	Skiploom	75	55	70	55	95	110	Random
+190	Aipom	NU	Normal	None		55	70	55	40	55	85	Random
+191	Sunkern	LC	Grass	None		30	30	30	30	30	30	Random
+192	Sunflora	NU	Grass	None	Sunkern	75	75	55	105	85	30	Random
+193	Yanma	NU	Bug	Flying		65	65	45	75	45	95	Random
+194	Wooper	LC	Water	Ground		55	45	45	25	25	15	Random
+195	Quagsire	UU	Water	Ground	Wooper	95	85	85	65	65	35	Random
+196	Espeon	UUBL	Psychic	None	Eevee	65	65	60	130	95	110	Random
+197	Umbreon	OU	Dark	None	Eevee	95	65	110	60	130	65	Random
+198	Murkrow	NU	Dark	Flying		60	85	42	85	42	91	Random
+199	Slowking	UU	Water	Psychic	Slowbro	95	75	80	100	110	30	Random
+200	Misdreavus	OU	Ghost	None		60	60	60	85	85	85	Random
+201	Unown	NU	Psychic	None		48	72	48	72	48	48	Genderless
+202	Wobbuffet	NU	Psychic	None		190	33	58	33	58	33	Random
+203	Girafarig	UU	Normal	Psychic		70	80	65	90	65	85	Random
+204	Pineco	NU	Bug	None		50	65	90	35	35	15	Random
+205	Forretress	OU	Bug	Steel	Pineco	75	90	140	60	60	40	Random
+206	Dunsparce	NU	Normal	None		100	70	70	65	65	45	Random
+207	Gligar	UU	Ground	Flying		65	75	105	35	65	85	Random
+208	Steelix	OU	Steel	Ground	Onix	75	85	200	55	65	30	Random
+209	Snubbull	LC	Normal	None		60	80	50	40	40	30	Random
+210	Granbull	UU	Normal	None	Snubbull	90	120	75	60	60	45	Random
+211	Qwilfish	UU	Water	Poison		65	95	75	55	55	85	Random
+212	Scizor	UUBL	Bug	Steel	Scyther	70	130	100	55	80	65	Random
+213	Shuckle	NU	Bug	Rock		20	10	230	10	230	5	Random
+214	Heracross	OU	Bug	Fighting		80	125	75	40	95	85	Random
+215	Sneasel	NU	Dark	Ice		55	95	55	35	75	115	Random
+216	Teddiursa	LC	Normal	None		60	80	50	50	50	40	Random
+217	Ursaring	UUBL	Normal	None	Teddiursa	90	130	75	75	75	55	Random
+218	Slugma	LC	Fire	None		40	40	40	70	40	20	Random
+219	Magcargo	NU	Fire	Rock	Slugma	50	50	120	80	80	30	Random
+220	Swinub	LC	Ice	Ground		50	50	40	30	30	50	Random
+221	Piloswine	UU	Ice	Ground	Swinub	100	100	80	60	60	50	Random
+222	Corsola	NU	Water	Rock		55	55	85	65	85	35	Random
+223	Remoraid	LC	Water	None		35	65	35	65	35	65	Random
+224	Octillery	NU	Water	None	Remoraid	75	105	75	105	75	45	Random
+225	Delibird	NU	Ice	Flying		45	55	45	65	45	75	Random
+226	Mantine	NU	Water	Flying		65	40	70	80	140	70	Random
+227	Skarmory	OU	Steel	Flying		65	80	140	40	70	70	Random
+228	Houndour	NU	Dark	Fire		45	60	30	80	50	65	Random
+229	Houndoom	UUBL	Dark	Fire	Houndour	75	90	50	110	80	95	Random
+230	Kingdra	UUBL	Water	Dragon	Seadra	75	95	95	95	95	85	Random
+231	Phanpy	LC	Ground	None		90	60	60	40	40	40	Random
+232	Donphan	UUBL	Ground	None	Phanpy	90	120	120	60	60	50	Random
+233	Porygon2	UUBL	Normal	None	Porygon	85	80	90	105	95	60	Genderless
+234	Stantler	NU	Normal	None		73	95	62	85	65	85	Random
+235	Smeargle	UUBL	Normal	None		55	20	35	20	45	75	Random
+236	Tyrogue	LC	Fighting	None		35	35	35	35	35	35	Male
+237	Hitmontop	NU	Fighting	None	Tyrogue	50	95	95	35	110	70	Male
+238	Smoochum	LC	Ice	Psychic		45	30	15	85	65	65	Female
+239	Elekid	NU	Electric	None		45	63	37	65	55	95	Random
+240	Magby	LC	Fire	None		45	75	37	70	55	83	Random
+241	Miltank	OU	Normal	None		95	80	105	40	70	100	Female
+242	Blissey	OU	Normal	None	Chansey	255	10	10	75	135	55	Female
+243	Raikou	OU	Electric	None		90	85	75	115	100	115	Genderless
+244	Entei	UUBL	Fire	None		115	115	85	90	75	100	Genderless
+245	Suicune	OU	Water	None		100	75	115	90	115	85	Genderless
+246	Larvitar	LC	Rock	Ground		50	64	50	45	50	41	Random
+247	Pupitar	NU	Rock	Ground	Larvitar	70	84	70	65	70	51	Random
+248	Tyranitar	OU	Rock	Dark	Pupitar	100	134	110	95	100	61	Random
+249	Lugia	Uber	Psychic	Flying		106	90	130	90	154	110	Genderless
+250	Ho-oh	Uber	Fire	Flying		106	130	90	110	154	90	Genderless
+251	Celebi	Uber	Psychic	Grass		100	100	100	100	100	100	Genderless

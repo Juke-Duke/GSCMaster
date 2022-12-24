@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="HotChocolate.Data.MongoDb" Version="12.15.2" />
+    <PackageReference Include="HotChocolate.Data.MongoDb" Version="13.0.0-preview.88" />
   </ItemGroup>
 
 </Project>

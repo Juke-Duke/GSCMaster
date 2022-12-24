@@ -1,24 +1,24 @@
-using GSCMaster.Application.Repositories;
-using GSCMaster.Application.Services;
-using GSCMaster.Application.Services.Authentication;
-using GSCMaster.Infrastructure.Services.Authenticaion;
-using GSCMaster.Infrastructure.Database;
-using GSCMaster.Infrastructure.Repositories;
-using GSCMaster.Infrastructure.Services;
-using GSCMaster.Infrastructure.Services.Authentication;
+using System.Text;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.IdentityModel.Tokens;
-using System.Text;
 using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
+using GSCMaster.Application.Services;
+using GSCMaster.Application.Services.Authentication;
+using GSCMaster.Application.Services.Repositories;
+using GSCMaster.Infrastructure;
+using GSCMaster.Infrastructure.Services;
+using GSCMaster.Infrastructure.Services.Authenticaion;
+using GSCMaster.Infrastructure.Services.Authentication;
+using GSCMaster.Infrastructure.Services.Repositories;
 
 namespace GSCMaster.Infrastructure;
 public static class DependencyInjection
 {
     public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration config)
     {
-        services.AddSingleton<GSCMasterDbContext>();
+        services.AddSingleton<GSCMasterDBConnection>();
 
         services.AddAuthentication(config);
 

@@ -1,10 +1,10 @@
-using GSCMaster.Contracts.Authentication.Requests;
-using GSCMaster.Contracts.Authentication.Response;
+using GSCMaster.Application.Features.Authentication;
+using GSCMaster.Core.Common.Primitives;
 
 namespace GSCMaster.Application.Services.Authentication;
 public interface IAuthenticationService
 {
-    Task<AuthenticationResponse> RegisterTrainerAsync(RegisterTrainerRequest request, CancellationToken cancellationToken);
+    Task<ErrorProne<AuthenticationResponse>> RegisterTrainerAsync(RegisterTrainerCommand request, CancellationToken cancellationToken);
 
-    Task<AuthenticationResponse> LoginTrainerAsync(LoginTrainerRequest request, CancellationToken cancellationToken);
+    Task<ErrorProne<AuthenticationResponse>> LoginTrainerAsync(LoginTrainerCommand request, CancellationToken cancellationToken);
 }

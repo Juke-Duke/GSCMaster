@@ -1,22 +1,22 @@
 Name	Effect	IsConsumable?
 Berry	Restores 10 HP when at 50% max HP or less.	TRUE
 Berry Juice	Restores 20 HP when at 50% max HP or less.	TRUE
-Berserk Gene	On switch-in, raises holder's Attack stat by 2 and confuses it.	TRUE
+Berserk Gene	On switch-in, raises holder's Attack by 2 stages and confuses it.	TRUE
 Bitter Berry	Holder is cured if it is confused.	TRUE
 Black Belt	Holder's Fighting-type attacks have 110% power.	FALSE
 Black Glasses	Holder's Dark-type attacks have 110% power.	FALSE
-Bright Powder	Lowers opponent's move accuracy by approximatley 8%.	FALSE
+Bright Powder	Lowers opponent's move accuracy by ~8%.	FALSE
 Burnt Berry	Holder is cured if it is frozen.	TRUE
 Charcoal	Holder's Fire-type attacks have 110% power.	FALSE
 Dragon Scale	Holder's Dragon-type attacks have 110% power.	FALSE
-Focus Band	Holder has approximately a 12% chance to survive an attack that would KO it with 1 HP.	FALSE
+Focus Band	Holder has ~12% chance to survive an attack that would KO it with 1 HP.	FALSE
 Gold Berry	Restores 30 HP when at 50% max HP or less.	TRUE
 Hard Stone	Holder's Rock-type attacks have 110% power.	FALSE
 Ice Berry	Holder is cured if it is burnt.	TRUE
 King's Rock	Holder's attacks without a chance to flinch gain a 10% chance to flinch.	FALSE
 Leftovers	At the end of every turn, holder restores 1/16 of its max HP.	FALSE
 Light Ball	If held by a Pikachu, its Special Attack is doubled.	FALSE
-Lucky Punch	If held by a Chansey, its critical hit ratio is always at stage 2, a 25% critical rate.	FALSE
+Lucky Punch	If held by a Chansey, its critical hit ratio is raised by 2 stages (25% critical rate).	FALSE
 Magnet	Holder's Electric-type attacks have 110% power.	FALSE
 Metal Coat	Holder's Steel-type attacks have 110% power.	FALSE
 Metal Powder	If held by a Ditto, its Defense and SpDefense stats are 150%, even while Transformed.	FALSE
@@ -31,12 +31,12 @@ Poison Barb	Holder's Poison-type attacks have 110% power.	FALSE
 Polkadot Bow	Holder's Normal-type attacks have 110% power.	FALSE
 PRZ Cure Berry	Holder is cured if it is paralyzed.	TRUE
 PSN Cure Berry	Holder is cured if it is poisoned.	TRUE
-Quick Claw	Each turn, holder has approximatley a 23% chance to move first in its priority bracket.	FALSE
-Scope Lens	Holder's critical hit ratio is raised by 1 stage, 12.5% increased critical rate.	FALSE
+Quick Claw	Each turn, holder has ~23% chance to move first in its priority bracket.	FALSE
+Scope Lens	Holder's critical hit ratio is raised by 1 stage (12.5% critical rate).	FALSE
 Sharp Beak	Holder's Flying-type attacks have 110% power.	FALSE
 Silver Powder	Holder's Bug-type attacks have 110% power.	FALSE
 Soft Sand	Holder's Ground-type attacks have 110% power.	FALSE
 Spell Tag	Holder's Ghost-type attacks have 110% power.	FALSE
-Stick	If held by a Farfetch’d, its critical hit ratio is always at stage 2, a 25% critical rate.	FALSE
+Stick	If held by a Farfetch'd, its critical hit ratio is raised by 2 stages (25% critical rate).	FALSE
 Thick Club	If held by a Cubone or a Marowak, its Attack stat is doubled.	FALSE
 Twisted Spoon	Holder's Psychic-type attacks have 110% power.	FALSE

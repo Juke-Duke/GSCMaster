@@ -13,8 +13,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSCMaster.Core", "GSCMaster
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSCMaster.Infrastructure", "GSCMaster.Infrastructure\GSCMaster.Infrastructure.csproj", "{D2194C73-79D5-46F4-B725-F1350A8D66C3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSCMaster.Contracts", "GSCMaster.Contracts\GSCMaster.Contracts.csproj", "{2287A468-C8B4-4D89-AB90-30116A52EE8B}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,9 +42,5 @@ Global
 		{D2194C73-79D5-46F4-B725-F1350A8D66C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D2194C73-79D5-46F4-B725-F1350A8D66C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D2194C73-79D5-46F4-B725-F1350A8D66C3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2287A468-C8B4-4D89-AB90-30116A52EE8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2287A468-C8B4-4D89-AB90-30116A52EE8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2287A468-C8B4-4D89-AB90-30116A52EE8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2287A468-C8B4-4D89-AB90-30116A52EE8B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

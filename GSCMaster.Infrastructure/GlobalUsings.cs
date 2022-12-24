@@ -1,0 +1,1 @@
+global using Type = GSCMaster.Core.Common.Enumerations.Types.Type;
